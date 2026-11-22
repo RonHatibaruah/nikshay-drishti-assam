@@ -238,12 +238,14 @@ def build_proposal_pdf(output_path):
     )
 
     story = []
-    story.append(safe_paragraph("NORTH EAST SEVA FIRST INNOVATION CHALLENGE (NESFIC 2026)", subtitle_style))
-    story.append(safe_paragraph("STREAM 1 — GOVERNMENT TRACK • OFFICIAL SOLUTION PROPOSAL", title_style))
-    story.append(safe_paragraph("<b>NikshayDrishti (Assam TB Sentinel)</b> — AI-Powered TB Risk Stratification & Decision Support", subtitle_style))
+    # Hero Header Banner for Page 1
+    hero_img = os.path.join(img_dir, 'hero_header_assam_sentinel.jpg')
+    if os.path.exists(hero_img):
+        story.append(Image(hero_img, width=490, height=128.6))
+        story.append(Spacer(1, 6))
 
     meta_data = [
-        [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
+        [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Health Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
         [safe_paragraph("<b>Lead Applicant:</b> Ron Hatibaruah", meta_style), safe_paragraph("<b>Application Format:</b> USPR Standard Proposal (PDF)", meta_style)],
         [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>GitHub:</b> github.com/RonHatibaruah/nikshay-drishti-assam", meta_style)]
     ]
@@ -272,22 +274,37 @@ def build_proposal_pdf(output_path):
         story.append(safe_paragraph(sec_title, h2_style))
 
         if 'Field 1:' in sec_title:
-            img = os.path.join(img_dir, 'diagram_1_before_after_workflow.jpg')
-            if os.path.exists(img):
+            img1 = os.path.join(img_dir, 'diagram_1_before_after_workflow.jpg')
+            img2 = os.path.join(img_dir, 'diagram_13_assam_field_realities_logistics.jpg')
+            if os.path.exists(img1):
                 story.append(Spacer(1, 4))
-                story.append(Image(img, width=490, height=275.6))
+                story.append(Image(img1, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+            if os.path.exists(img2):
+                story.append(Spacer(1, 4))
+                story.append(Image(img2, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 2:' in sec_title:
-            img = os.path.join(img_dir, 'diagram_3_cadastral_anomaly_catalog.jpg')
-            if os.path.exists(img):
+            img1 = os.path.join(img_dir, 'diagram_3_cadastral_anomaly_catalog.jpg')
+            img2 = os.path.join(img_dir, 'diagram_15_clinical_shap_waterfall.jpg')
+            if os.path.exists(img1):
                 story.append(Spacer(1, 4))
-                story.append(Image(img, width=490, height=275.6))
+                story.append(Image(img1, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+            if os.path.exists(img2):
+                story.append(Spacer(1, 4))
+                story.append(Image(img2, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 3:' in sec_title:
-            img = os.path.join(img_dir, 'diagram_4_land_health_score_hierarchy.jpg')
-            if os.path.exists(img):
+            img1 = os.path.join(img_dir, 'diagram_14_multi_device_prototype_showcase.jpg')
+            img2 = os.path.join(img_dir, 'diagram_4_land_health_score_hierarchy.jpg')
+            if os.path.exists(img1):
                 story.append(Spacer(1, 4))
-                story.append(Image(img, width=490, height=275.6))
+                story.append(Image(img1, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+            if os.path.exists(img2):
+                story.append(Spacer(1, 4))
+                story.append(Image(img2, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 4:' in sec_title:
             img = os.path.join(img_dir, 'diagram_2_dual_system_reconciliation.jpg')
@@ -332,10 +349,15 @@ def build_proposal_pdf(output_path):
                 story.append(Image(img, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 11:' in sec_title:
-            img = os.path.join(img_dir, 'diagram_6_citizen_land_health_certificate.jpg')
-            if os.path.exists(img):
+            img1 = os.path.join(img_dir, 'diagram_16_assam_elimination_trajectory.jpg')
+            img2 = os.path.join(img_dir, 'diagram_6_citizen_land_health_certificate.jpg')
+            if os.path.exists(img1):
                 story.append(Spacer(1, 4))
-                story.append(Image(img, width=490, height=275.6))
+                story.append(Image(img1, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+            if os.path.exists(img2):
+                story.append(Spacer(1, 4))
+                story.append(Image(img2, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 12:' in sec_title:
             img = os.path.join(img_dir, 'diagram_12_dual_district_pilot_validation.jpg')
