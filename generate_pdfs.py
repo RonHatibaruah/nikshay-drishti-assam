@@ -302,13 +302,43 @@ def build_proposal_pdf(output_path):
                 story.append(Image(img, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 6:' in sec_title:
-            img = os.path.join(img_dir, 'diagram_6_citizen_land_health_certificate.jpg')
+            img = os.path.join(img_dir, 'diagram_8_development_roadmap_gantt.jpg')
+            if os.path.exists(img):
+                story.append(Spacer(1, 4))
+                story.append(Image(img, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+        elif 'Field 7:' in sec_title:
+            img = os.path.join(img_dir, 'diagram_9_data_pipeline_abdm_tokenization.jpg')
+            if os.path.exists(img):
+                story.append(Spacer(1, 4))
+                story.append(Image(img, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+        elif 'Field 8:' in sec_title:
+            img = os.path.join(img_dir, 'diagram_10_team_governance_matrix.jpg')
             if os.path.exists(img):
                 story.append(Spacer(1, 4))
                 story.append(Image(img, width=490, height=275.6))
                 story.append(Spacer(1, 5))
         elif 'Field 9:' in sec_title:
             img = os.path.join(img_dir, 'diagram_7_enterprise_system_architecture.jpg')
+            if os.path.exists(img):
+                story.append(Spacer(1, 4))
+                story.append(Image(img, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+        elif 'Field 10:' in sec_title:
+            img = os.path.join(img_dir, 'diagram_11_zero_trust_security_cdss_safety.jpg')
+            if os.path.exists(img):
+                story.append(Spacer(1, 4))
+                story.append(Image(img, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+        elif 'Field 11:' in sec_title:
+            img = os.path.join(img_dir, 'diagram_6_citizen_land_health_certificate.jpg')
+            if os.path.exists(img):
+                story.append(Spacer(1, 4))
+                story.append(Image(img, width=490, height=275.6))
+                story.append(Spacer(1, 5))
+        elif 'Field 12:' in sec_title:
+            img = os.path.join(img_dir, 'diagram_12_dual_district_pilot_validation.jpg')
             if os.path.exists(img):
                 story.append(Spacer(1, 4))
                 story.append(Image(img, width=490, height=275.6))
