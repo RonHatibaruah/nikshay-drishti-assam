@@ -14,6 +14,7 @@ def clean_text_for_textarea(text):
     """
     Strips raw markdown syntax, converts formulas to plain text,
     standardizes bullets and whitespace for HTML <textarea> compatibility.
+    Removes all angle brackets (< and >) and replaces them with 'smaller than' and 'greater than'.
     """
     t = text
     lines = t.split('\n')
@@ -21,6 +22,9 @@ def clean_text_for_textarea(text):
     
     for line in lines:
         stripped = line.strip()
+        # Skip internal word count comments
+        if re.match(r'^\*\(Word Count:.*?\)\*$', stripped):
+            continue
         # Detect table separator
         if re.match(r'^\|?[\s\-:|]+\|?$', stripped):
             continue
@@ -32,6 +36,24 @@ def clean_text_for_textarea(text):
         cleaned_lines.append(line)
         
     t = '\n'.join(cleaned_lines)
+    
+    # Diagram arrows transformation before stripping angle brackets
+    t = re.sub(r'<\-{3,}>', ' [interconnected with] ', t)
+    t = re.sub(r'<\-{1,2}>', ' [connected with] ', t)
+    t = re.sub(r'\+\-{2,}>', ' |-- ', t)
+    t = re.sub(r'\-{2,}>', ' [leads to] ', t)
+    t = re.sub(r'\->', ' [to] ', t)
+    t = re.sub(r'<\-{2,}', ' [from] ', t)
+    t = re.sub(r'<\-', ' [from] ', t)
+
+    # Replace comparison operators with English words
+    t = re.sub(r'<=\s*', 'smaller than or equal to ', t)
+    t = re.sub(r'>=\s*', 'greater than or equal to ', t)
+    t = re.sub(r'<\s*', 'smaller than ', t)
+    t = re.sub(r'>\s*', 'greater than ', t)
+
+    # Any remaining brackets replaced
+    t = t.replace('<', 'smaller than ').replace('>', 'greater than ')
     
     # Strip markdown headers (##, ###)
     t = re.sub(r'^#{1,6}\s+(.*?)$', r'\1', t, flags=re.MULTILINE)

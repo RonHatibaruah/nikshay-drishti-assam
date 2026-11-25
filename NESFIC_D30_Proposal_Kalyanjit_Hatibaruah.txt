@@ -26,15 +26,15 @@ Geographic Coverage (SEO & GEO): Assam State (IN-AS, 26.1445° N, 91.7362° E, D
 
 Section 03: Supporting Material Summary for Portal Form
 
-• Upload Proof of Work / Solution Evidence (PDF): NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf (Included in submission package; file size: ~2.0 MB / < 10 MB limit).  
+• Upload Proof of Work / Solution Evidence (PDF): NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf (Included in submission package; file size: ~2.0 MB / smaller than 10 MB limit).  
 • Demo / Product Video URL: https://nikshay-drishti.pages.dev/?tutorial=true (Interactive live prototype with embedded guide and 1-click demo logins for State TB Officer, District TB Officer, and Medical Officer).  
 • Product / Website URL: https://nikshay-drishti.pages.dev/  
-• Additional Supporting Material (PDF): NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf (Full illustrated 12-field proposal dossier with 16:9 widescreen technological framework infographics; file size: ~7.0 MB / < 10 MB limit).
+• Additional Supporting Material (PDF): NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf (Full illustrated 12-field proposal dossier with 16:9 widescreen technological framework infographics; file size: ~7.0 MB / smaller than 10 MB limit).
 
 ================================================================================
 FIELD 1: PROBLEM UNDERSTANDING & USER WORKFLOW
 Portal Requirement Note: (Word Count: 442 words / Limit: 500 words)
-Actual Plain Text Word Count: 416 words
+Actual Plain Text Word Count: 419 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -42,9 +42,9 @@ Operational Context in Assam
 Tuberculosis (TB) remains an acute public health priority in Assam, with approximately 32,000 cases notified annually under the National TB Elimination Programme (NTEP). While epidemiological data is diligently entered into the central Ni-kshay portal, this information currently functions as a passive repository for retrospective reporting rather than an active, real-time decision-support system.
 
 Assam faces distinct geographical and socio-economic vulnerabilities that exacerbate TB morbidity:
-1. Tea Garden Communities (Upper Assam): Over 800 tea estates across Dibrugarh, Tinsukia, and Charaideo exhibit severe malnutrition (BMI < 14 in over 30% of cases), silica dust exposure, high alcohol dependency, and delayed health-seeking behaviour.
+1. Tea Garden Communities (Upper Assam): Over 800 tea estates across Dibrugarh, Tinsukia, and Charaideo exhibit severe malnutrition (BMI smaller than 14 in over 30% of cases), silica dust exposure, high alcohol dependency, and delayed health-seeking behaviour.
 2. Riverine Sandbars (Char Areas in Lower Assam): Flood-prone islands across Barpeta, Dhubri, and South Salmara experience severe geographic isolation, rendering routine diagnostic sample transit erratic during monsoon months.
-3. High Early Mortality: Verbal autopsy data reveals that 74% of all TB-related deaths in Assam occur within the first 30 days of treatment initiation, predominantly driven by unrecognised severe undernutrition, diagnostic cascade lag (>14 days), and undetected drug resistance.
+3. High Early Mortality: Verbal autopsy data reveals that 74% of all TB-related deaths in Assam occur within the first 30 days of treatment initiation, predominantly driven by unrecognised severe undernutrition, diagnostic cascade lag (greater than 14 days), and undetected drug resistance.
 4. Diagnostic Referral & Logistics Cascade Gaps: High patient attrition occurs between peripheral Ayushman Arogya Mandirs (AAMs) and molecular NAAT testing sites (Truenat/CBNAAT), while unpredicted cartridge stockouts disrupt continuous Universal Drug Susceptibility Testing (UDST).
 
 Current Workflow & Structural Deficits
@@ -65,7 +65,7 @@ In strict compliance with the challenge mandate, NikshayDrishti is architected e
 ================================================================================
 FIELD 2: PROPOSED SOLUTION & KEY FEATURES
 Portal Requirement Note: (Word Count: 448 words / Limit: 500 words)
-Actual Plain Text Word Count: 444 words
+Actual Plain Text Word Count: 445 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -76,7 +76,7 @@ Core Modules & Key Features
 
 1. Multi-Dimensional Mortality & Default Risk Stratifier:
 Ingests baseline clinical biomarkers (BMI, sputum smear grade, bilateral cavitation, rifampicin resistance, HIV, diabetes, substance use, and age). An explainable XGBoost model computes a composite Risk Score (0–100) and stratifies cohorts into four actionable tiers:
-• Critical (Score > 75): Triggers clinical alerts for immediate inpatient bed admission at District Hospital TB wards, high-protein nutrition kit dispatch, and bi-weekly Medical Officer reviews.
+• Critical (Score greater than 75): Triggers clinical alerts for immediate inpatient bed admission at District Hospital TB wards, high-protein nutrition kit dispatch, and bi-weekly Medical Officer reviews.
 • High Risk (Score 51–75): Weekly home visits by STS and prioritized Nikshay Poshan direct benefit transfers.
 • Moderate (Score 26–50): Fortnightly ASHA review with digital adherence monitoring.
 • Low (Score ≤ 25): Standard outpatient DOTS regimen.
@@ -104,7 +104,7 @@ A dedicated administrative cockpit allowing State and District TB Officers to ma
 ================================================================================
 FIELD 3: DESCRIBE USER JOURNEY, WIREFRAMES, PROTOTYPE & PROOF OF WORK
 Portal Requirement Note: (Word Count: 446 words / Limit: 500 words)
-Actual Plain Text Word Count: 411 words
+Actual Plain Text Word Count: 412 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -113,7 +113,7 @@ Operational User Journey Across Frontline & Administrative Cadres
 2. Automated CDSS Stratification: The inference engine computes a Risk Score (e.g., 88/100, Critical) driven by severe undernutrition (BMI 13.8) and cavitary lesions. The treating Medical Officer reviews an explainable SHAP card, approves immediate inpatient admission at the District Civil Hospital, and dispatches an emergency high-protein nutritional basket.
 3. Closed-Loop Referral Tracking: Sputum transit is tracked in real time. If courier transit exceeds 48 hours, an automated SMS/dashboard alert escalates the case to the Senior TB Laboratory Supervisor (STLS) to prevent specimen degradation.
 4. District Supervisory Tour Execution: The DTO reviews the weekly Supervisory Priority Index (SPI) dashboard, identifying Doomdooma TU as high-risk due to high initial default. An automated supervisory tour is generated, dispatching a mobile digital X-ray van for targeted active case finding in adjacent tea garden bastis.
-5. Administrative Inventory Governance: The State TB Officer views a low-stock alert in Darrang (Truenat buffer < 4 days) and executes a 1-click emergency reallocation of 50 cartridges from the Guwahati Central State Buffer.
+5. Administrative Inventory Governance: The State TB Officer views a low-stock alert in Darrang (Truenat buffer smaller than 4 days) and executes a 1-click emergency reallocation of 50 cartridges from the Guwahati Central State Buffer.
 
 Live Prototype & Supporting Artifacts
 A fully functional, high-fidelity production prototype is hosted live at:  
@@ -136,7 +136,7 @@ Refer to the attached NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf (10 MB c
 ================================================================================
 FIELD 4: TECHNOLOGY & SOLUTION ARCHITECTURE
 Portal Requirement Note: (Word Count: 440 words / Limit: 500 words)
-Actual Plain Text Word Count: 453 words
+Actual Plain Text Word Count: 459 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -144,13 +144,13 @@ System Architecture & Technical Flow
 NikshayDrishti is designed as an enterprise, cloud-native GovTech platform engineered for containerized on-premise deployment within the Assam State Data Centre (ASDC) in Dispur, Guwahati. This ensures complete sovereign data residency, zero-trust network isolation, and full compliance with the Digital Personal Data Protection (DPDP) Act 2023.
 
 `
-[ Central Ni-kshay v2.4 API ] <---> [ ASDC Ingestion & ABDM Gateway ]
-[ Nikshay Aushadhi (LIMS)   ] <---> [ REST / FHIR Connectors (TLS 1.3)]
+[ Central Ni-kshay v2.4 API ]  [interconnected with]  [ ASDC Ingestion & ABDM Gateway ]
+[ Nikshay Aushadhi (LIMS)   ]  [interconnected with]  [ REST / FHIR Connectors (TLS 1.3)]
                                                 v
-[ PostgreSQL 16 + PostGIS 3.4 ] <---> [ FastAPI AI Core (XGBoost + SHAP) ]
-[ Redis 7.2 Distributed Cache ] <---> [ Double Metaphone Deduplication  ]
+[ PostgreSQL 16 + PostGIS 3.4 ]  [interconnected with]  [ FastAPI AI Core (XGBoost + SHAP) ]
+[ Redis 7.2 Distributed Cache ]  [interconnected with]  [ Double Metaphone Deduplication  ]
                                                 v
-[ Secure Admin API Layer ] <--------> [ React 18 + Leaflet GIS Frontend ]
+[ Secure Admin API Layer ]  [interconnected with]  [ React 18 + Leaflet GIS Frontend ]
 [ Role-Based Access Control ]          [ Deployed at ASDC / Cloudflare Edge]
 `
 
@@ -168,7 +168,7 @@ FastAPI microservices interfacing with national health databases:
 3. Analytics & Machine Learning Core:
 Containerized microservices running on Kubernetes (K8s) within ASDC:
 • Gradient Boosted Risk Classifier (XGBoost): Regularized tree ensemble trained on multi-variable clinical biomarkers, calibrated to achieve an AUROC of 0.887 for 30-day mortality prediction.
-• SHAP Explainability Engine: Generates exact Shapley additive feature attribution vectors in < 5 ms, rendering intuitive positive/negative contribution bars for frontline clinicians.
+• SHAP Explainability Engine: Generates exact Shapley additive feature attribution vectors in smaller than 5 ms, rendering intuitive positive/negative contribution bars for frontline clinicians.
 • Fuzzy Record Linkage Engine: Combines Double Metaphone Assamese phonetic transliteration, Jaro-Winkler string distance, and GPS proximity matching to eliminate duplicate registrations across private and public facilities.
 • Predictive Logistics Forecaster: Time-series cartridge burn-rate model estimating facility stock depletion horizons.
 
@@ -185,7 +185,7 @@ Hardware & Hosting Requirements
 ================================================================================
 FIELD 5: DEVELOPMENT METHODOLOGY & INTERMEDIATE STEPS
 Portal Requirement Note: (Word Count: 442 words / Limit: 500 words)
-Actual Plain Text Word Count: 436 words
+Actual Plain Text Word Count: 437 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -193,8 +193,8 @@ GovTech Agile-Iterative Engineering Methodology
 NikshayDrishti follows an adapted Agile-Iterative GovTech development methodology structured into six well-defined intermediate steps. This approach ensures rapid functional prototyping while maintaining rigorous clinical validation, health data security, and seamless alignment with National TB Elimination Programme (NTEP) protocols.
 
 `
-[Phase 1: Clinical Discovery] -> [Phase 2: Data Pipeline & Modeling] -> [Phase 3: Prototype & CDSS UX]
-[Phase 6: Statewide Expansion] <- [Phase 5: Dual-District Pilot]  <- [Phase 4: ASDC MVP Hardening]
+[Phase 1: Clinical Discovery]  [to]  [Phase 2: Data Pipeline & Modeling]  [to]  [Phase 3: Prototype & CDSS UX]
+[Phase 6: Statewide Expansion]  [from]  [Phase 5: Dual-District Pilot]   [from]  [Phase 4: ASDC MVP Hardening]
 `
 
 Sequence of Intermediate Steps & Key Deliverables
@@ -217,7 +217,7 @@ Sequence of Intermediate Steps & Key Deliverables
 
 5. Step 5: Dual-District Pilot Deployment & Frontline Calibration (Weeks 19–34)
 • Activities: Deployment in Dibrugarh (tea gardens) and Kamrup Metro (urban). Training of 2 DTOs, 14 Medical Officers, and 28 STS/STLS supervisors. Activation of closed-loop specimen tracking across 30 peripheral health facilities and AI-Xray van route optimization.
-• Key Output: Operational Pilot Telemetry, clinician usability feedback reports (SUS score > 85), and mid-term clinical audit.
+• Key Output: Operational Pilot Telemetry, clinician usability feedback reports (SUS score greater than 85), and mid-term clinical audit.
 
 6. Step 6: Evaluation, Algorithm Refinement & Statewide Scale-Up (Weeks 35–52)
 • Activities: Rigorous statistical validation of 30-day mortality reduction and referral transit times. Refinement of CDSS rule thresholds based on clinical feedback. Preparation of statewide rollout infrastructure across all 35 Assam districts.
@@ -229,7 +229,7 @@ Sequence of Intermediate Steps & Key Deliverables
 ================================================================================
 FIELD 6: DEVELOPMENT TIMELINE & MILESTONES
 Portal Requirement Note: (Word Count: 440 words / Limit: 500 words)
-Actual Plain Text Word Count: 421 words
+Actual Plain Text Word Count: 427 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -237,10 +237,10 @@ Indicative 12-Month Phased Roadmap
 The 12-month development and validation roadmap is divided into four distinct phases with clear quarterly milestones, quantified deliverables, and explicit dependencies to ensure transparent governance and timely validation readiness.
 
 `
-Q1 (M1-M3): Foundation, ASDC Ingestion & Alpha Build  --> Milestone 1 (Alpha Ready)
-Q2 (M4-M6): Security Hardening, VAPT & Dual-District Launch --> Milestone 2 (Validation Ready)
-Q3 (M7-M9): Operational Pilot & Differentiated Care Scale --> Milestone 3 (Mid-Term Audit)
-Q4 (M10-M12): Final Clinical Evaluation & Statewide Rollout --> Milestone 4 (Statewide Ready)
+Q1 (M1-M3): Foundation, ASDC Ingestion & Alpha Build   [leads to]  Milestone 1 (Alpha Ready)
+Q2 (M4-M6): Security Hardening, VAPT & Dual-District Launch  [leads to]  Milestone 2 (Validation Ready)
+Q3 (M7-M9): Operational Pilot & Differentiated Care Scale  [leads to]  Milestone 3 (Mid-Term Audit)
+Q4 (M10-M12): Final Clinical Evaluation & Statewide Rollout  [leads to]  Milestone 4 (Statewide Ready)
 `
 
 Phase Breakdown, Milestones & Deliverables
@@ -257,7 +257,7 @@ Phase 2: Security Hardening, VAPT Clearance & Pilot Launch (Months 4–6)
 
 Phase 3: Active Pilot Operations & Differentiated Care Scaling (Months 7–9)
 • Milestone 3 (End of Month 9): Mid-Term Pilot Audit & Clinical Efficacy Assessment
-• Deliverables: Continuous tracking of > 1,500 notified TB patients across pilot districts; automated inpatient triage alerts for Critical cohorts; algorithmic dispatch of Mobile AI-Xray vans to top 20 tea garden bastis and urban slums; mid-term clinical audit demonstrating > 85% referral closure within 48 hours.
+• Deliverables: Continuous tracking of greater than 1,500 notified TB patients across pilot districts; automated inpatient triage alerts for Critical cohorts; algorithmic dispatch of Mobile AI-Xray vans to top 20 tea garden bastis and urban slums; mid-term clinical audit demonstrating greater than 85% referral closure within 48 hours.
 • Dependencies: Uninterrupted cellular connectivity across tea garden health centers; local ASHA network mobilization.
 
 Phase 4: Impact Evaluation, System Refinement & Statewide Scale-Up (Months 10–12)
@@ -271,7 +271,7 @@ Phase 4: Impact Evaluation, System Refinement & Statewide Scale-Up (Months 10–
 ================================================================================
 FIELD 7: DATA & INFORMATION REQUIREMENTS
 Portal Requirement Note: (Word Count: 444 words / Limit: 500 words)
-Actual Plain Text Word Count: 437 words
+Actual Plain Text Word Count: 438 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -285,7 +285,7 @@ Required Datasets & Format Specifications
 • Format: JSON payloads via Ni-kshay REST API v2.4 / daily encrypted batch CSV extract.
 
 2. Comorbidity & Laboratory Investigation Streams:
-• Fields: HIV status and CD4 count (if available), diabetes mellitus status (non-diabetic, controlled, uncontrolled HbA1c > 8.0%), and history of tobacco/alcohol dependency.
+• Fields: HIV status and CD4 count (if available), diabetes mellitus status (non-diabetic, controlled, uncontrolled HbA1c greater than 8.0%), and history of tobacco/alcohol dependency.
 • Format: HL7/FHIR observation resources or structured Ni-kshay comorbidity flags.
 
 3. Diagnostic Logistics & Sputum Cascade Data (Nikshay Aushadhi / LIMS):
@@ -323,11 +323,11 @@ Executing an enterprise clinical decision support and programmatic platform with
 
 `
 [Principal Investigator & Architect: Kalyanjit Hatibaruah]
-       +---> [Clinical & Public Health Lead: TB Epidemiologist]
-       +---> [Lead Health AI & ML Engineer: XGBoost/SHAP Specialist]
-       +---> [Senior Full-Stack & WebGIS Engineer: React/Leaflet Specialist]
-       +---> [DevSecOps & ASDC Infrastructure Specialist]
-       +---> [District Field Operations & Training Coordinator]
+        |--  [Clinical & Public Health Lead: TB Epidemiologist]
+        |--  [Lead Health AI & ML Engineer: XGBoost/SHAP Specialist]
+        |--  [Senior Full-Stack & WebGIS Engineer: React/Leaflet Specialist]
+        |--  [DevSecOps & ASDC Infrastructure Specialist]
+        |--  [District Field Operations & Training Coordinator]
 `
 
 Team Roles, Technical Expertise & Indicative Manpower
@@ -359,7 +359,7 @@ Key technical proficiencies include explainable AI (SHAP), PostGIS spatial optim
 ================================================================================
 FIELD 9: TESTING, VALIDATION & EVIDENCE
 Portal Requirement Note: (Word Count: 442 words / Limit: 500 words)
-Actual Plain Text Word Count: 386 words
+Actual Plain Text Word Count: 387 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -367,8 +367,8 @@ Multi-Tiered Verification & Empirical Validation Framework
 NikshayDrishti is verified through a rigorous four-tiered testing and validation methodology encompassing algorithmic machine learning benchmarking, software quality assurance, clinical simulation, and real-world pilot evidence.
 
 `
-[Tier 1: ML Model Benchmark (5-Fold CV)] -> [Tier 2: End-to-End Software QA]
-[Tier 4: Live Prototype & Pilot Metrics]  <- [Tier 3: Clinical Simulation Audit]
+[Tier 1: ML Model Benchmark (5-Fold CV)]  [to]  [Tier 2: End-to-End Software QA]
+[Tier 4: Live Prototype & Pilot Metrics]   [from]  [Tier 3: Clinical Simulation Audit]
 `
 
 Empirical Validation Tiers & Results
@@ -383,7 +383,7 @@ The core mortality risk classification model was benchmarked using 5-fold strati
 
 2. Tier 2: End-to-End Software Quality & Performance Testing:
 • Automated Unit & Integration Testing: Full test suite verifying FHIR connectors, Ni-kshay webhook ingestion, and database transaction atomicity.
-• Load & Concurrency Testing: Simulated 2,500 concurrent frontline health workers querying patient worklists and geospatial layers; average API response time remained < 120 ms.
+• Load & Concurrency Testing: Simulated 2,500 concurrent frontline health workers querying patient worklists and geospatial layers; average API response time remained smaller than 120 ms.
 • Vulnerability & Security Testing: Codebase audited against OWASP Top 10 vulnerabilities, ensuring zero SQL injection, cross-site scripting (XSS), or insecure deserialization flaws.
 
 3. Tier 3: Clinical Simulation & Algorithmic Deduplication Evidence:
@@ -411,8 +411,8 @@ Comprehensive Governance, Security & Regulatory Compliance
 NikshayDrishti handles sensitive public health records, necessitating enterprise-grade security controls, patient privacy preservation, regulatory adherence, and strict clinical safety guardrails across its entire architecture.
 
 `
-[DPDP Act 2023 & ABDM Compliance] -> [Zero-Trust ASDC Sovereign Hosting]
-[Mandatory Human-in-the-Loop CDSS] <- [SHA-256 Immutable Audit Trails]
+[DPDP Act 2023 & ABDM Compliance]  [to]  [Zero-Trust ASDC Sovereign Hosting]
+[Mandatory Human-in-the-Loop CDSS]  [from]  [SHA-256 Immutable Audit Trails]
 `
 
 Security & Privacy Architecture
@@ -446,7 +446,7 @@ In accordance with National Medical Commission (NMC) guidelines and the NESFIC-D
 ================================================================================
 FIELD 11: INNOVATION & DIFFERENTIATION
 Portal Requirement Note: (Word Count: 440 words / Limit: 500 words)
-Actual Plain Text Word Count: 390 words
+Actual Plain Text Word Count: 391 words
 ================================================================================
 [BEGIN COPY-PASTE FOR THIS TEXTAREA]
 
@@ -454,7 +454,7 @@ Transformative Shift: From Passive Reporting to Prospective Action
 The central innovation of NikshayDrishti lies in fundamentally transitioning Assam’s tuberculosis control paradigm from passive, post-hoc statistical reporting to prospective, real-time clinical and operational decision support.
 
 `
-CURRENT STATE (Passive Ni-kshay)     ---> NIKSHAYDRISHTI (Prospective CDSS)
+CURRENT STATE (Passive Ni-kshay)      [leads to]  NIKSHAYDRISHTI (Prospective CDSS)
 • Retrospective quarterly reporting     • Prospective day-1 mortality risk triage
 • Uniform outpatient protocol for all   • Differentiated clinical care pathways
 • Unmonitored specimen courier transit  • Closed-loop 48-hour SLA barcode tracking
