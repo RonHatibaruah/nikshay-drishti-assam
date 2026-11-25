@@ -57,7 +57,7 @@ def clean_text_for_textarea(text):
 
 def generate_proposal_text():
     src_file = os.path.join(base_dir, 'proposal_contents.md')
-    out_file = os.path.join(base_dir, 'NESFIC_D30_Proposal_Ron_Hatibaruah.txt')
+    out_file = os.path.join(base_dir, 'NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.txt')
     
     with open(src_file, 'r', encoding='utf-8') as f:
         raw = f.read()
@@ -69,10 +69,10 @@ def generate_proposal_text():
     header += "NESFIC 2026 - STREAM 1 (GOVERNMENT TRACK) - OFFICIAL PROPOSAL SUBMISSION\n"
     header += "Problem Statement ID: NESFIC-D-30: TB Risk Stratification & Programme Decision Support\n"
     header += "Sponsoring Department: National Health Mission & State TB Cell, Govt of Assam\n"
-    header += "Applicant / Innovator: Ron Hatibaruah\n"
+    header += "Applicant / Innovator: Kalyanjit Hatibaruah (Flugelsoft Labs)\n"
     header += "Proposed Solution: NikshayDrishti (নিশ্চয় দৃষ্টি) — Assam TB Sentinel\n"
     header += "Live Working Prototype: https://nikshay-drishti.pages.dev/\n"
-    header += "GitHub Repository: https://github.com/RonHatibaruah/nikshay-drishti-assam\n"
+    header += "GitHub Repository: https://github.com/flugelsoft-01/tb-risk-stratification-ai\n"
     header += "=" * 80 + "\n\n"
     header += "INSTRUCTIONS FOR APPLICANT:\n"
     header += "Each section below corresponds exactly to an official online form field on the\n"
@@ -119,8 +119,9 @@ def generate_proposal_text():
     print(f"Generated text version: {out_file} ({len(full_output)} bytes)")
 
 def generate_pow_text():
+    import shutil
     src_file = os.path.join(base_dir, 'proof_of_work_dossier.md')
-    out_file = os.path.join(base_dir, 'NESFIC_D30_Proof_of_Work_Ron_Hatibaruah.txt')
+    out_file = os.path.join(base_dir, 'NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.txt')
     
     with open(src_file, 'r', encoding='utf-8') as f:
         raw = f.read()
@@ -129,10 +130,10 @@ def generate_pow_text():
     header += "NESFIC 2026 - STREAM 1 - PROOF OF WORK & TECHNICAL EVIDENCE DOSSIER\n"
     header += "Problem Statement ID: NESFIC-D-30: TB Risk Stratification & Programme Decision Support\n"
     header += "Sponsoring Department: National Health Mission & State TB Cell, Govt of Assam\n"
-    header += "Applicant / Innovator: Ron Hatibaruah\n"
+    header += "Applicant / Innovator: Kalyanjit Hatibaruah (Flugelsoft Labs)\n"
     header += "Solution: NikshayDrishti (Assam TB Sentinel)\n"
     header += "Live Prototype: https://nikshay-drishti.pages.dev/\n"
-    header += "GitHub Repository: https://github.com/RonHatibaruah/nikshay-drishti-assam\n"
+    header += "GitHub Repository: https://github.com/flugelsoft-01/tb-risk-stratification-ai\n"
     header += "=" * 80 + "\n\n"
     
     cleaned = clean_text_for_textarea(raw)
@@ -140,6 +141,14 @@ def generate_pow_text():
     
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write(full_output)
+
+    # Sync to public/downloads/
+    pub_dl = os.path.join(base_dir, 'public', 'downloads')
+    os.makedirs(pub_dl, exist_ok=True)
+    prop_out = os.path.join(base_dir, 'NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.txt')
+    if os.path.exists(prop_out):
+        shutil.copy2(prop_out, os.path.join(pub_dl, 'NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.txt'))
+    shutil.copy2(out_file, os.path.join(pub_dl, 'NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.txt'))
         
     print(f"Generated text version: {out_file} ({len(full_output)} bytes)")
 

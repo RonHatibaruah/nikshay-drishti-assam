@@ -47,14 +47,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
                 <div className="flex items-center gap-2 text-slate-200">
                   <Mail className="w-4 h-4 text-teal-400 flex-shrink-0" />
                   <span className="text-xs">
-                    Visitor Inquiries & Technical Contact:
+                    Lead Applicant & Technical Inquiries:
                   </span>
                 </div>
                 <a
-                  href="mailto:ron.hatibaruah@gmail.com"
+                  href="mailto:kalyanjit.hatibaruah@gmail.com"
                   className="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-600 hover:bg-teal-500 text-white font-semibold text-xs rounded-md shadow transition-colors"
                 >
-                  <span>ron.hatibaruah@gmail.com</span>
+                  <span>kalyanjit.hatibaruah@gmail.com</span>
                 </a>
               </div>
 
@@ -72,18 +72,29 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
 
           {/* Col 2: Official References & Proposal */}
           <div>
-            <h4 className="text-slate-200 font-semibold mb-3">Official References</h4>
+            <h4 className="text-slate-200 font-semibold mb-3">Official References & Code</h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <a
-                  href="/downloads/NESFIC_D30_Proposal_Ron_Hatibaruah.pdf"
+                  href="/downloads/NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  download="NESFIC_D30_Proposal_Ron_Hatibaruah.pdf"
+                  download="NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf"
                   className="hover:text-teal-300 flex items-center gap-1 text-slate-200 font-medium"
                 >
                   <Download className="w-3 h-3 text-teal-400" />
                   Official Proposal (PDF)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/flugelsoft-01/tb-risk-stratification-ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-teal-300 flex items-center gap-1 text-teal-300 font-medium"
+                >
+                  <ExternalLink className="w-3 h-3 text-teal-400" />
+                  GitHub Repository (flugelsoft-01)
                 </a>
               </li>
               <li>
@@ -134,16 +145,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar with Flugelsoft Labs Copyright */}
         <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-400 text-[11px]">
           <div>
-            North East Seva First Innovation Challenge (NESFIC 2026) • Government Track
+            © 2026 Flugelsoft Labs. All Rights Reserved. • NESFIC 2026 Government Track
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <span>Author / Principal Investigator: <strong>Ron Hatibaruah</strong></span>
+            <span>Lead Applicant / Principal Investigator: <strong>Kalyanjit Hatibaruah</strong></span>
             <span>•</span>
-            <a href="mailto:ron.hatibaruah@gmail.com" className="text-teal-400 hover:underline">
-              ron.hatibaruah@gmail.com
+            <a href="mailto:kalyanjit.hatibaruah@gmail.com" className="text-teal-400 hover:underline">
+              kalyanjit.hatibaruah@gmail.com
+            </a>
+            <span>•</span>
+            <a href="https://github.com/flugelsoft-01/tb-risk-stratification-ai" target="_blank" rel="noreferrer" className="text-teal-400 hover:underline">
+              GitHub: flugelsoft-01
             </a>
             <span>•</span>
             <span>Assam State Data Centre (ASDC) Ready</span>

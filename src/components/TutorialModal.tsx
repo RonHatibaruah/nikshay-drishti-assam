@@ -287,14 +287,14 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
                 <div>
                   <h4 className="font-bold text-slate-900 text-sm">Official Solution Proposal Document (PDF)</h4>
                   <p className="text-slate-500 text-[11px] mt-0.5">
-                    Includes all 5 submission fields, implementation roadmap, budget allocation, and embedded 16:9 widescreen technological framework infographics.
+                    Includes all 12 submission fields, implementation roadmap, budget allocation, and embedded 16:9 widescreen technological framework infographics.
                   </p>
                 </div>
                 <a
-                  href="/downloads/NESFIC_D30_Proposal_Ron_Hatibaruah.pdf"
+                  href="/downloads/NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  download="NESFIC_D30_Proposal_Ron_Hatibaruah.pdf"
+                  download="NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf"
                   className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-lg shadow flex items-center gap-2 whitespace-nowrap self-start sm:self-center"
                 >
                   <Download className="w-4 h-4" />
@@ -309,7 +309,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
         {/* Footer */}
         <div className="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between">
           <div className="text-[11px] text-slate-500">
-            Principal Investigator: <strong>Ron Hatibaruah</strong> (ron.hatibaruah@gmail.com)
+            Lead Applicant / Principal Investigator: <strong>Kalyanjit Hatibaruah</strong> • Flugelsoft Labs (kalyanjit.hatibaruah@gmail.com)
           </div>
           <button
             onClick={onClose}

@@ -10,10 +10,11 @@
 [![Leaflet GIS](https://img.shields.io/badge/Geospatial-Leaflet_%7C_PostGIS-199900?style=for-the-badge&logo=leaflet)](https://leafletjs.com/)
 
 > 🌐 **Live Interactive Prototype:** **[https://nikshay-drishti.pages.dev/](https://nikshay-drishti.pages.dev/)**  
+> 📖 **Interactive Tutorial & User Guide:** **[https://nikshay-drishti.pages.dev/?tutorial=true](https://nikshay-drishti.pages.dev/?tutorial=true)**  
 > Explore the Clinical Risk Stratification Worklist, Assam Vulnerability & ACF Map, Closed-Loop Referral Cascade, Facility Supervision & Cartridge Stockout Forecaster, Fuzzy De-Duplication Engine, and State Executive Command Center.
 >
 > ⚡ **Edge Serverless API:** `https://nikshay-drishti.pages.dev/api/health`  
-> 💻 **GitHub Repository:** [https://github.com/RonHatibaruah/nikshay-drishti-assam](https://github.com/RonHatibaruah/nikshay-drishti-assam)
+> 💻 **GitHub Repository:** [https://github.com/flugelsoft-01/tb-risk-stratification-ai](https://github.com/flugelsoft-01/tb-risk-stratification-ai)
 
 ---
 
@@ -81,8 +82,8 @@ Tuberculosis control in Assam faces distinct geographical and socio-economic hur
 ### Local Development
 ```bash
 # 1. Clone repository
-git clone https://github.com/RonHatibaruah/nikshay-drishti-assam.git
-cd nikshay-drishti-assam
+git clone https://github.com/flugelsoft-01/tb-risk-stratification-ai.git
+cd tb-risk-stratification-ai
 
 # 2. Install dependencies
 npm install
@@ -125,5 +126,7 @@ python3 generate_text_versions.py
 - **Challenge:** North East Seva First Innovation Challenge (NESFIC 2026)
 - **Problem Statement ID:** NESFIC-D-30 (Stream 1 — Government Track: Health Sector)
 - **Sponsoring Department:** National Health Mission (NHM) & State TB Cell, Department of Health & Family Welfare, Government of Assam
-- **Principal Investigator / Author:** **Ron Hatibaruah**
-- **Contact:** `ronhatibaruah@gmail.com`
+- **Lead Applicant & Principal Investigator:** **Kalyanjit Hatibaruah**
+- **Organization:** **Flugelsoft Labs**
+- **Contact:** `kalyanjit.hatibaruah@gmail.com`
+- **Copyright:** © 2026 Flugelsoft Labs. All Rights Reserved.

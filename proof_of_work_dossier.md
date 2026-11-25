@@ -4,9 +4,9 @@
 **Submission Category:** NESFIC 2026 (Stream 1 — Government Track: Health Sector)  
 **Problem Statement ID:** **NESFIC-D-30**  
 **Challenge Owners:** National Health Mission (NHM) & State TB Cell, Department of Health & Family Welfare, Government of Assam  
-**Lead Innovator & Applicant:** Ron Hatibaruah  
+**Lead Innovator & Applicant:** Kalyanjit Hatibaruah (Flugelsoft Labs)  
 **Live Working Prototype:** `https://nikshay-drishti.pages.dev/` (Demo Admin: `admin@nhm.assam.gov.in` / `dispur2026`)  
-**GitHub Repository:** `https://github.com/RonHatibaruah/nikshay-drishti-assam`  
+**GitHub Repository:** `https://github.com/flugelsoft-01/tb-risk-stratification-ai`  
 **Geographic Coverage (SEO & GEO):** Assam State (`IN-AS`, 26.1445° N, 91.7362° E, Dispur/Guwahati)  
 **Document Type:** Empirical Proof of Work (PoW), Architecture Validation, Data Schemas & Performance Benchmarks  
 

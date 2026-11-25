@@ -37,7 +37,7 @@ class NumberedCanvas(canvas.Canvas):
         # Header (pages after page 1)
         if self._pageNumber > 1:
             self.drawString(54, letter[1] - 36, "Government of Assam • National Health Mission & State TB Cell • NESFIC-D-30")
-            self.drawRightString(letter[0] - 54, letter[1] - 36, "NikshayDrishti (Assam TB Sentinel) — Ron Hatibaruah")
+            self.drawRightString(letter[0] - 54, letter[1] - 36, "NikshayDrishti (Assam TB Sentinel) — Kalyanjit Hatibaruah")
             self.setStrokeColor(colors.HexColor("#cbd5e1"))
             self.setLineWidth(0.5)
             self.line(54, letter[1] - 42, letter[0] - 54, letter[1] - 42)
@@ -46,7 +46,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setStrokeColor(colors.HexColor("#cbd5e1"))
         self.setLineWidth(0.5)
         self.line(54, 45, letter[0] - 54, 45)
-        self.drawString(54, 32, "NESFIC 2026 Proposal • Problem NESFIC-D-30 • Applicant: Ron Hatibaruah")
+        self.drawString(54, 32, "NESFIC 2026 Proposal • Problem NESFIC-D-30 • Applicant: Kalyanjit Hatibaruah (Flugelsoft Labs)")
         self.drawRightString(letter[0] - 54, 32, f"Page {self._pageNumber} of {page_count}")
         self.restoreState()
 
@@ -246,8 +246,8 @@ def build_proposal_pdf(output_path):
 
     meta_data = [
         [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Health Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
-        [safe_paragraph("<b>Lead Applicant:</b> Ron Hatibaruah", meta_style), safe_paragraph("<b>Application Format:</b> USPR Standard Proposal (PDF)", meta_style)],
-        [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>GitHub:</b> github.com/RonHatibaruah/nikshay-drishti-assam", meta_style)]
+        [safe_paragraph("<b>Lead Applicant:</b> Kalyanjit Hatibaruah (Flugelsoft Labs)", meta_style), safe_paragraph("<b>Application Format:</b> USPR Standard Proposal (PDF)", meta_style)],
+        [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>GitHub:</b> github.com/flugelsoft-01/tb-risk-stratification-ai", meta_style)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 264])
     t_meta.setStyle(TableStyle([
@@ -406,7 +406,7 @@ def build_proof_of_work_pdf(output_path):
 
     meta_data = [
         [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
-        [safe_paragraph("<b>Lead Applicant:</b> Ron Hatibaruah", meta_style), safe_paragraph("<b>Format:</b> Solution Evidence (PDF < 10 MB)", meta_style)],
+        [safe_paragraph("<b>Lead Applicant:</b> Kalyanjit Hatibaruah (Flugelsoft Labs)", meta_style), safe_paragraph("<b>Format:</b> Solution Evidence (PDF < 10 MB)", meta_style)],
         [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>Verification Status:</b> Fully Built & Benchmarked", meta_style)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 264])
@@ -465,8 +465,15 @@ def build_proof_of_work_pdf(output_path):
     print(f"Generated {output_path}")
 
 if __name__ == '__main__':
-    proposal_pdf = os.path.join(base_dir, 'NESFIC_D30_Proposal_Ron_Hatibaruah.pdf')
-    pow_pdf = os.path.join(base_dir, 'NESFIC_D30_Proof_of_Work_Ron_Hatibaruah.pdf')
+    import shutil
+    proposal_pdf = os.path.join(base_dir, 'NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf')
+    pow_pdf = os.path.join(base_dir, 'NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf')
     
     build_proposal_pdf(proposal_pdf)
     build_proof_of_work_pdf(pow_pdf)
+
+    # Sync to public/downloads/
+    pub_dl = os.path.join(base_dir, 'public', 'downloads')
+    os.makedirs(pub_dl, exist_ok=True)
+    shutil.copy2(proposal_pdf, os.path.join(pub_dl, 'NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf'))
+    shutil.copy2(pow_pdf, os.path.join(pub_dl, 'NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf'))

@@ -236,7 +236,7 @@ def create_diagram_10():
                               facecolor=NAVY_HEADER, edgecolor=CYAN_ACCENT, linewidth=1.5, zorder=2)
     ax.add_patch(lead_box)
     ax.text(0.50, 0.67, "LEAD INNOVATOR & PRINCIPAL INVESTIGATOR", ha='center', va='center', fontsize=8.5, fontweight='bold', color='#38bdf8', zorder=4)
-    ax.text(0.50, 0.64, "Ron Hatibaruah (100% Commitment • 12 Months)", ha='center', va='center', fontsize=8, fontweight='bold', color='#ffffff', zorder=4)
+    ax.text(0.50, 0.64, "Kalyanjit Hatibaruah • Flugelsoft Labs (100% Commitment)", ha='center', va='center', fontsize=8, fontweight='bold', color='#ffffff', zorder=4)
     ax.text(0.50, 0.622, "Enterprise GovTech Architecture • Public Sector Innovation • System Design", ha='center', va='center', fontsize=6.8, color='#94a3b8', zorder=4)
 
     # Connecting line from Steering to Lead

@@ -2,21 +2,21 @@
 
 **Problem Statement:** NESFIC-D-30 (Stream 1 — Government Track: Health Sector) — *TB Risk Stratification & Programme Decision Support*  
 **Challenge Owners:** National Health Mission (NHM) & State TB Cell, Department of Health & Family Welfare, Government of Assam  
-**Lead Applicant / Innovator:** Ron Hatibaruah  
+**Lead Applicant / Innovator:** Kalyanjit Hatibaruah (Flugelsoft Labs)  
 **Application Platform:** Assam Startup Portal (NESFIC 2026 Online Application Form)  
 **Proposed Solution Name:** NikshayDrishti (নিশ্চয় দৃষ্টি) — Assam TB Sentinel  
 **Live Working Prototype:** `https://nikshay-drishti.pages.dev/` (Demo Admin: `admin@nhm.assam.gov.in` / `dispur2026`)  
-**GitHub Repository:** `https://github.com/RonHatibaruah/nikshay-drishti-assam`  
+**GitHub Repository:** `https://github.com/flugelsoft-01/tb-risk-stratification-ai`  
 **Geographic Coverage (SEO & GEO):** Assam State (`IN-AS`, 26.1445° N, 91.7362° E, Dispur/Guwahati)  
 
 ---
 
 ### Section 03: Supporting Material Summary for Portal Form
 
-• **Upload Proof of Work / Solution Evidence (PDF):** `NESFIC_D30_Proof_of_Work_Ron_Hatibaruah.pdf` (Included in submission package; file size: ~2.0 MB / < 10 MB limit).  
-• **Demo / Product Video URL:** `https://nikshay-drishti.pages.dev/` (Interactive live prototype with 1-click demo logins for State TB Officer, District TB Officer, and Medical Officer).  
+• **Upload Proof of Work / Solution Evidence (PDF):** `NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf` (Included in submission package; file size: ~2.0 MB / < 10 MB limit).  
+• **Demo / Product Video URL:** `https://nikshay-drishti.pages.dev/?tutorial=true` (Interactive live prototype with embedded guide and 1-click demo logins for State TB Officer, District TB Officer, and Medical Officer).  
 • **Product / Website URL:** `https://nikshay-drishti.pages.dev/`  
-• **Additional Supporting Material (PDF):** `NESFIC_D30_Proposal_Ron_Hatibaruah.pdf` (Full illustrated 12-field proposal dossier with 16:9 widescreen technological framework infographics; file size: ~2.1 MB / < 10 MB limit).  
+• **Additional Supporting Material (PDF):** `NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf` (Full illustrated 12-field proposal dossier with 16:9 widescreen technological framework infographics; file size: ~7.0 MB / < 10 MB limit).  
 
 ---
 
@@ -103,7 +103,7 @@ The prototype features an integrated Admin Login Portal (`admin@nhm.assam.gov.in
 • **Facility Supervision & Logistics:** Truenat/CBNAAT capacity utilization matrix, 14-day cartridge stockout forecasters, and automated SPI inspection schedules.  
 • **Admin Management Console:** Full governance cockpit for patient entry, clinical triage override with reason logging, emergency cartridge dispatch, CDSS weight sliders, and CSV/JSON audit trail export.
 
-*Refer to the attached `NESFIC_D30_Proof_of_Work_Ron_Hatibaruah.pdf` (10 MB compliant) for detailed architectural wireframes, model benchmark tables, confusion matrices, and empirical validation metrics.*
+*Refer to the attached `NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf` (10 MB compliant) for detailed architectural wireframes, model benchmark tables, confusion matrices, and empirical validation metrics.*
 
 ---
 
@@ -275,7 +275,7 @@ Development and testing utilize synthetic cohorts calibrated to Assam state heal
 Executing an enterprise clinical decision support and programmatic platform within Assam’s public health ecosystem requires a balanced blend of public health domain mastery, machine learning engineering, health informatics, and field operations management.
 
 ```
-[Principal Investigator & Architect: Ron Hatibaruah]
+[Principal Investigator & Architect: Kalyanjit Hatibaruah]
        |
        +---> [Clinical & Public Health Lead: TB Epidemiologist]
        +---> [Lead Health AI & ML Engineer: XGBoost/SHAP Specialist]
@@ -286,7 +286,7 @@ Executing an enterprise clinical decision support and programmatic platform with
 
 ### Team Roles, Technical Expertise & Indicative Manpower
 
-1. **Lead Innovator & Principal Investigator (Ron Hatibaruah) — 100% Allocation (12 Months):**
+1. **Lead Innovator & Principal Investigator (Kalyanjit Hatibaruah) — 100% Allocation (12 Months):**
    - *Expertise:* Enterprise GovTech architecture, health informatics, large-scale cloud systems design, and project governance. Responsible for overall program execution, stakeholder alignment with NHM Assam and State TB Cell, system integration, and regulatory compliance.
 
 2. **Clinical & Public Health Lead (Senior Pulmonologist / NTEP Consultant) — 50% Allocation (12 Months):**
@@ -345,7 +345,7 @@ A fully interactive, live production prototype is actively deployed and accessib
 **`https://nikshay-drishti.pages.dev/`**  
 Demonstrating real-time patient triage, interactive SHAP attribution cards, dynamic 4-layer basemap switching, and administrative management console workflows.
 
-*Comprehensive ROC curves, calibration plots, confusion matrices, and detailed benchmark comparison tables are documented in the attached `NESFIC_D30_Proof_of_Work_Ron_Hatibaruah.pdf`.*
+*Comprehensive ROC curves, calibration plots, confusion matrices, and detailed benchmark comparison tables are documented in the attached `NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf`.*
 
 ---
 

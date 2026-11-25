@@ -34,7 +34,7 @@ export const App: React.FC = () => {
   const [isAdminLoginOpen, setIsAdminLoginOpen] = useState<boolean>(false);
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
 
-  // Restore previous admin session if exists
+  // Restore previous admin session if exists & check URL for tutorial deep link
   useEffect(() => {
     const saved = localStorage.getItem('nikshay_admin_session');
     if (saved) {
@@ -43,6 +43,12 @@ export const App: React.FC = () => {
       } catch (e) {
         localStorage.removeItem('nikshay_admin_session');
       }
+    }
+
+    // Support deep link: ?tutorial=true or #tutorial
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get('tutorial') === 'true' || searchParams.get('guide') === 'true' || window.location.hash === '#tutorial' || window.location.hash === '#guide') {
+      setIsTutorialOpen(true);
     }
   }, []);
 

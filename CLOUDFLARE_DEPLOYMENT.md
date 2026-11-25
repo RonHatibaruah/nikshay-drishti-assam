@@ -3,7 +3,7 @@
 **Project Name:** `nikshay-drishti`  
 **Problem Statement:** NESFIC-D-30 (Stream 1 — Government Track: Health Sector)  
 **Target Domain:** `https://nikshay-drishti.pages.dev/`  
-**GitHub Repository:** `https://github.com/RonHatibaruah/nikshay-drishti-assam`  
+**GitHub Repository:** `https://github.com/flugelsoft-01/tb-risk-stratification-ai`  
 
 ---
 
@@ -14,7 +14,7 @@
 1. Log into your [Cloudflare Dashboard](https://dash.cloudflare.com/).
 2. In the left navigation menu, navigate to **Workers & Pages** ➔ **Create application** ➔ select the **Pages** tab.
 3. Click **Connect to Git** and choose **GitHub**.
-4. Select the repository: `RonHatibaruah/nikshay-drishti-assam`.
+4. Select the repository: `flugelsoft-01/tb-risk-stratification-ai`.
 5. In **Set up builds and deployments**, configure:
    - **Project name:** `nikshay-drishti`
    - **Production branch:** `main`
