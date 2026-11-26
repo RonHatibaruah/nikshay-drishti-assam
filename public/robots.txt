@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bhumi-binimoy.pages.dev/sitemap.xml
+Sitemap: https://tb-risk-stratification-ai.pages.dev/sitemap.xml

@@ -2,7 +2,7 @@
 
 **Project Name:** `nikshay-drishti`  
 **Problem Statement:** NESFIC-D-30 (Stream 1 — Government Track: Health Sector)  
-**Target Domain:** `https://nikshay-drishti.pages.dev/`  
+**Target Domain:** `https://tb-risk-stratification-ai.pages.dev/`  
 **GitHub Repository:** `https://github.com/flugelsoft-01/tb-risk-stratification-ai`  
 
 ---
@@ -24,7 +24,7 @@
    - **Root directory:** *(leave blank / default)*
 6. In **Environment variables (advanced)**, configure:
    - `NODE_VERSION` = `20.18.0`
-7. Click **Save and Deploy**. Cloudflare Pages will build and deploy your application to `https://nikshay-drishti.pages.dev/`. Every future push to `main` will automatically trigger a zero-downtime deployment!
+7. Click **Save and Deploy**. Cloudflare Pages will build and deploy your application to `https://tb-risk-stratification-ai.pages.dev/`. Every future push to `main` will automatically trigger a zero-downtime deployment!
 
 ---
 

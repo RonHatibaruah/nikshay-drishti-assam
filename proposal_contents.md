@@ -5,7 +5,7 @@
 **Lead Applicant / Innovator:** Kalyanjit Hatibaruah (Flugelsoft Labs)  
 **Application Platform:** Assam Startup Portal (NESFIC 2026 Online Application Form)  
 **Proposed Solution Name:** NikshayDrishti (নিশ্চয় দৃষ্টি) — Assam TB Sentinel  
-**Live Working Prototype:** `https://nikshay-drishti.pages.dev/` (Demo Admin: `admin@nhm.assam.gov.in` / `dispur2026`)  
+**Live Working Prototype:** `https://tb-risk-stratification-ai.pages.dev/` (Demo Admin: `admin@nhm.assam.gov.in` / `dispur2026`)  
 **GitHub Repository:** `https://github.com/flugelsoft-01/tb-risk-stratification-ai`  
 **Geographic Coverage (SEO & GEO):** Assam State (`IN-AS`, 26.1445° N, 91.7362° E, Dispur/Guwahati)  
 
@@ -14,8 +14,8 @@
 ### Section 03: Supporting Material Summary for Portal Form
 
 • **Upload Proof of Work / Solution Evidence (PDF):** `NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf` (Included in submission package; file size: ~2.0 MB / < 10 MB limit).  
-• **Demo / Product Video URL:** `https://nikshay-drishti.pages.dev/?tutorial=true` (Interactive live prototype with embedded guide and 1-click demo logins for State TB Officer, District TB Officer, and Medical Officer).  
-• **Product / Website URL:** `https://nikshay-drishti.pages.dev/`  
+• **Demo / Product Video URL:** `https://tb-risk-stratification-ai.pages.dev/?tutorial=true` (Interactive live prototype with embedded guide and 1-click demo logins for State TB Officer, District TB Officer, and Medical Officer).  
+• **Product / Website URL:** `https://tb-risk-stratification-ai.pages.dev/`  
 • **Additional Supporting Material (PDF):** `NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf` (Full illustrated 12-field proposal dossier with 16:9 widescreen technological framework infographics; file size: ~7.0 MB / < 10 MB limit).  
 
 ---
@@ -92,7 +92,7 @@ A dedicated administrative cockpit allowing State and District TB Officers to ma
 
 ### Live Prototype & Supporting Artifacts
 A fully functional, high-fidelity production prototype is hosted live at:  
-**`https://nikshay-drishti.pages.dev/`**  
+**`https://tb-risk-stratification-ai.pages.dev/`**  
 The prototype features an integrated Admin Login Portal (`admin@nhm.assam.gov.in` / `dispur2026`) with 1-click demo persona buttons for State TB Officer (STO), District TB Officer (DTO), and Supervisory Medical Officer (MO-TC).
 
 ### Key UI Views & Wireframe Architecture Demonstrated in the Prototype:
@@ -177,7 +177,7 @@ NikshayDrishti follows an adapted Agile-Iterative GovTech development methodolog
 
 3. **Step 3: High-Fidelity Prototype & CDSS UX Engineering (Weeks 9–14)**
    - *Activities:* Front-end architecture in React 18, TypeScript, and Leaflet. Development of role-based consoles (STO, DTO, MO-TC), 4-layer basemap switcher, referral cascade tracker, and administrative management console.
-   - *Key Output:* Functional, high-fidelity interactive prototype deployed live at `https://nikshay-drishti.pages.dev/`.
+   - *Key Output:* Functional, high-fidelity interactive prototype deployed live at `https://tb-risk-stratification-ai.pages.dev/`.
 
 4. **Step 4: ASDC MVP Containerization & Security Hardening (Weeks 15–18)**
    - *Activities:* Containerization with Docker and Kubernetes for ASDC staging. Implementation of SHA-256 cryptographic audit trails, role-based access control (RBAC), and AES-256 data encryption. Third-party STQC vulnerability assessment and penetration testing (VAPT).
@@ -342,7 +342,7 @@ The core mortality risk classification model was benchmarked using 5-fold strati
 
 4. **Tier 4: Live Production Prototype Evidence:**
 A fully interactive, live production prototype is actively deployed and accessible at:  
-**`https://nikshay-drishti.pages.dev/`**  
+**`https://tb-risk-stratification-ai.pages.dev/`**  
 Demonstrating real-time patient triage, interactive SHAP attribution cards, dynamic 4-layer basemap switching, and administrative management console workflows.
 
 *Comprehensive ROC curves, calibration plots, confusion matrices, and detailed benchmark comparison tables are documented in the attached `NESFIC_D30_Proof_of_Work_Kalyanjit_Hatibaruah.pdf`.*

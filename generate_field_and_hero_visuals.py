@@ -107,7 +107,7 @@ def create_hero_banner():
     # Badges Strip at Bottom
     badges = [
         ("STREAM 1: GOVT HEALTH TRACK", '#065f46', '#34d399'),
-        ("LIVE PROTOTYPE: https://nikshay-drishti.pages.dev/", '#1e293b', '#38bdf8'),
+        ("LIVE PROTOTYPE: https://tb-risk-stratification-ai.pages.dev/", '#1e293b', '#38bdf8'),
         ("ASDC ZERO-TRUST HOSTING", '#064e3b', '#a7f3d0'),
         ("CDSS DECISION SUPPORT ONLY", '#831843', '#f472b6')
     ]
@@ -213,7 +213,7 @@ def create_diagram_14():
     add_blueprint_grid(ax)
 
     add_header(ax, "NIKSHAYDRISHTI MULTI-DEVICE SOFTWARE SUITE & PRODUCTION UI INTERFACES",
-               "Live Working Prototype Deployed at https://nikshay-drishti.pages.dev/ • Verified on Desktop, Tablet & Mobile")
+               "Live Working Prototype Deployed at https://tb-risk-stratification-ai.pages.dev/ • Verified on Desktop, Tablet & Mobile")
 
     # Device Mockup 1: Desktop / Laptop (State TB Officer Cockpit) - Left
     desk_frame = FancyBboxPatch((0.03, 0.16), 0.45, 0.65, boxstyle="round,pad=0.01,rounding_size=0.015",

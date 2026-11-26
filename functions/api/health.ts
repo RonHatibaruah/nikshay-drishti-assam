@@ -13,7 +13,7 @@ export async function onRequestGet() {
     organization: "Flugelsoft Labs",
     contactEmail: "Kalyanjit@gmail.com",
     githubRepo: "https://github.com/flugelsoft-01/tb-risk-stratification-ai",
-    liveUrl: "https://nikshay-drishti.pages.dev/",
+    liveUrl: "https://tb-risk-stratification-ai.pages.dev/",
     edgeRuntime: "Cloudflare Pages Functions",
     cdssDisclaimer: "Risk outputs are decision-support only and must not replace clinical diagnosis or authorized programme decisions.",
     mlInferenceEngine: "XGBoost Multi-Variable Clinical Classifier (AUROC: 0.887)",

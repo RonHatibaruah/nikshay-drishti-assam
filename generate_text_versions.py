@@ -93,7 +93,7 @@ def generate_proposal_text():
     header += "Sponsoring Department: National Health Mission & State TB Cell, Govt of Assam\n"
     header += "Applicant / Innovator: Kalyanjit Hatibaruah (Flugelsoft Labs)\n"
     header += "Proposed Solution: NikshayDrishti (নিশ্চয় দৃষ্টি) — Assam TB Sentinel\n"
-    header += "Live Working Prototype: https://nikshay-drishti.pages.dev/\n"
+    header += "Live Working Prototype: https://tb-risk-stratification-ai.pages.dev/\n"
     header += "GitHub Repository: https://github.com/flugelsoft-01/tb-risk-stratification-ai\n"
     header += "=" * 80 + "\n\n"
     header += "INSTRUCTIONS FOR APPLICANT:\n"
@@ -154,7 +154,7 @@ def generate_pow_text():
     header += "Sponsoring Department: National Health Mission & State TB Cell, Govt of Assam\n"
     header += "Applicant / Innovator: Kalyanjit Hatibaruah (Flugelsoft Labs)\n"
     header += "Solution: NikshayDrishti (Assam TB Sentinel)\n"
-    header += "Live Prototype: https://nikshay-drishti.pages.dev/\n"
+    header += "Live Prototype: https://tb-risk-stratification-ai.pages.dev/\n"
     header += "GitHub Repository: https://github.com/flugelsoft-01/tb-risk-stratification-ai\n"
     header += "=" * 80 + "\n\n"
     

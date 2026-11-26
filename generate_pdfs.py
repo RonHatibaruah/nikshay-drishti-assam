@@ -247,7 +247,7 @@ def build_proposal_pdf(output_path):
     meta_data = [
         [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Health Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
         [safe_paragraph("<b>Lead Applicant:</b> Kalyanjit Hatibaruah (Flugelsoft Labs)", meta_style), safe_paragraph("<b>Application Format:</b> USPR Standard Proposal (PDF)", meta_style)],
-        [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>GitHub:</b> github.com/flugelsoft-01/tb-risk-stratification-ai", meta_style)]
+        [safe_paragraph("<b>Live Prototype:</b> https://tb-risk-stratification-ai.pages.dev/", meta_style), safe_paragraph("<b>GitHub:</b> github.com/flugelsoft-01/tb-risk-stratification-ai", meta_style)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 264])
     t_meta.setStyle(TableStyle([
@@ -407,7 +407,7 @@ def build_proof_of_work_pdf(output_path):
     meta_data = [
         [safe_paragraph("<b>Challenge ID:</b> NESFIC-D-30 (Govt Track)", meta_style), safe_paragraph("<b>Department:</b> NHM & State TB Cell, Govt of Assam", meta_style)],
         [safe_paragraph("<b>Lead Applicant:</b> Kalyanjit Hatibaruah (Flugelsoft Labs)", meta_style), safe_paragraph("<b>Format:</b> Solution Evidence (PDF < 10 MB)", meta_style)],
-        [safe_paragraph("<b>Live Prototype:</b> https://nikshay-drishti.pages.dev/", meta_style), safe_paragraph("<b>Verification Status:</b> Fully Built & Benchmarked", meta_style)]
+        [safe_paragraph("<b>Live Prototype:</b> https://tb-risk-stratification-ai.pages.dev/", meta_style), safe_paragraph("<b>Verification Status:</b> Fully Built & Benchmarked", meta_style)]
     ]
     t_meta = Table(meta_data, colWidths=[240, 264])
     t_meta.setStyle(TableStyle([

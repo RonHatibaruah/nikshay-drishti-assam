@@ -2,18 +2,18 @@
 ### AI-Powered TB Risk Stratification & Programme Decision Support System
 **National Health Mission (NHM) & State TB Cell, Government of Assam**
 
-[![Live Demo](https://img.shields.io/badge/Live_Prototype-nikshay--drishti.pages.dev-0f766e?style=for-the-badge&logo=cloudflarepages)](https://nikshay-drishti.pages.dev/)
+[![Live Demo](https://img.shields.io/badge/Live_Prototype-nikshay--drishti.pages.dev-0f766e?style=for-the-badge&logo=cloudflarepages)](https://tb-risk-stratification-ai.pages.dev/)
 [![Government of Assam](https://img.shields.io/badge/Government_of_Assam-Health_%26_Family_Welfare-065f46?style=for-the-badge)](https://nhm.assam.gov.in/)
 [![Challenge ID](https://img.shields.io/badge/NESFIC_2026-Stream_1_--_NESFIC--D--30-0284c7?style=for-the-badge)](https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-d-30)
 [![NTEP Ni-kshay](https://img.shields.io/badge/Integrated_with-Ni--kshay_%7C_NTEP-e11d48?style=for-the-badge)](https://www.nikshay.in/)
 [![React 18](https://img.shields.io/badge/Frontend-React_18_%7C_TypeScript_%7C_Tailwind-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
 [![Leaflet GIS](https://img.shields.io/badge/Geospatial-Leaflet_%7C_PostGIS-199900?style=for-the-badge&logo=leaflet)](https://leafletjs.com/)
 
-> 🌐 **Live Interactive Prototype:** **[https://nikshay-drishti.pages.dev/](https://nikshay-drishti.pages.dev/)**  
-> 📖 **Interactive Tutorial & User Guide:** **[https://nikshay-drishti.pages.dev/?tutorial=true](https://nikshay-drishti.pages.dev/?tutorial=true)**  
+> 🌐 **Live Interactive Prototype:** **[https://tb-risk-stratification-ai.pages.dev/](https://tb-risk-stratification-ai.pages.dev/)**  
+> 📖 **Interactive Tutorial & User Guide:** **[https://tb-risk-stratification-ai.pages.dev/?tutorial=true](https://tb-risk-stratification-ai.pages.dev/?tutorial=true)**  
 > Explore the Clinical Risk Stratification Worklist, Assam Vulnerability & ACF Map, Closed-Loop Referral Cascade, Facility Supervision & Cartridge Stockout Forecaster, Fuzzy De-Duplication Engine, and State Executive Command Center.
 >
-> ⚡ **Edge Serverless API:** `https://nikshay-drishti.pages.dev/api/health`  
+> ⚡ **Edge Serverless API:** `https://tb-risk-stratification-ai.pages.dev/api/health`  
 > 💻 **GitHub Repository:** [https://github.com/flugelsoft-01/tb-risk-stratification-ai](https://github.com/flugelsoft-01/tb-risk-stratification-ai)
 
 ---
