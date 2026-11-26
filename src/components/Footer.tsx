@@ -1,11 +1,12 @@
 import React from 'react';
-import { Shield, ExternalLink, Mail, AlertTriangle, FileText, Download, Lock } from 'lucide-react';
+import { Shield, ExternalLink, Mail, AlertTriangle, FileText, Download, Lock, Heart } from 'lucide-react';
 
 interface FooterProps {
   onOpenAdminLogin?: () => void;
+  onOpenDedication?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin, onOpenDedication }) => {
   return (
     <footer className="bg-[#071326] text-slate-300 text-xs border-t border-[#122442] mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -41,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
               <strong className="text-white">National Health Mission (NHM) & State TB Cell, Government of Assam</strong>.
             </p>
 
-            {/* Contact Email Box & Admin Link */}
+              {/* Contact Email Box, Dedication & Admin Link */}
             <div className="flex flex-wrap items-center gap-3">
               <div className="p-3 bg-[#0c1e3d] rounded-lg border border-blue-700/60 flex flex-wrap items-center justify-between gap-2 max-w-xl flex-1">
                 <div className="flex items-center gap-2 text-slate-200">
@@ -57,6 +58,17 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
                   <span>Kalyanjit@gmail.com</span>
                 </a>
               </div>
+
+              {onOpenDedication && (
+                <button
+                  onClick={onOpenDedication}
+                  className="px-3 py-2.5 bg-rose-950/70 hover:bg-rose-900/90 border border-rose-500/50 text-rose-200 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-sm"
+                  title="Founder's Personal Dedication to My Mother"
+                >
+                  <Heart className="w-3.5 h-3.5 fill-rose-400 text-rose-400" />
+                  <span>Dedicated to Mom</span>
+                </button>
+              )}
 
               {onOpenAdminLogin && (
                 <button

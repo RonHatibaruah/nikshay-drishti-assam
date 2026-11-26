@@ -10,6 +10,7 @@ import { ExecutiveCommand } from './components/ExecutiveCommand';
 import { TutorialModal } from './components/TutorialModal';
 import { AdminLogin, AdminUser } from './components/AdminLogin';
 import { AdminConsole } from './components/AdminConsole';
+import { DedicationModal } from './components/DedicationModal';
 import { 
   Activity, 
   MapPin, 
@@ -24,7 +25,8 @@ import {
   Download,
   Lock,
   ShieldCheck,
-  UserCheck
+  UserCheck,
+  Heart
 } from 'lucide-react';
 
 export const App: React.FC = () => {
@@ -32,6 +34,7 @@ export const App: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<string>('STO');
   const [isTutorialOpen, setIsTutorialOpen] = useState<boolean>(false);
   const [isAdminLoginOpen, setIsAdminLoginOpen] = useState<boolean>(false);
+  const [isDedicationOpen, setIsDedicationOpen] = useState<boolean>(true);
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
 
   // Restore previous admin session if exists & check URL for tutorial deep link
@@ -45,10 +48,21 @@ export const App: React.FC = () => {
       }
     }
 
-    // Support deep link: ?tutorial=true or #tutorial
+    // Check if user dismissed dedication modal
+    const dedicationDismissed = localStorage.getItem('nikshay_dedication_dismissed');
+    if (dedicationDismissed === 'true') {
+      setIsDedicationOpen(false);
+    } else {
+      setIsDedicationOpen(true);
+    }
+
+    // Support deep link: ?tutorial=true or #tutorial or ?dedication=true
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get('tutorial') === 'true' || searchParams.get('guide') === 'true' || window.location.hash === '#tutorial' || window.location.hash === '#guide') {
       setIsTutorialOpen(true);
+    }
+    if (searchParams.get('dedication') === 'true' || window.location.hash === '#dedication') {
+      setIsDedicationOpen(true);
     }
   }, []);
 
@@ -87,6 +101,7 @@ export const App: React.FC = () => {
         onOpenTutorial={() => setIsTutorialOpen(true)}
         adminUser={adminUser}
         onOpenAdminLogin={() => setIsAdminLoginOpen(true)}
+        onOpenDedication={() => setIsDedicationOpen(true)}
       />
 
       {/* Role Indicator & Quick Actions Banner */}
@@ -112,6 +127,16 @@ export const App: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2">
+          {/* Founder's Dedication Quick Pill */}
+          <button
+            onClick={() => setIsDedicationOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-900 rounded-lg text-xs font-bold shadow-sm transition-all"
+            title="Read Founder's Dedication to Mom"
+          >
+            <Heart className="w-3.5 h-3.5 fill-rose-600 text-rose-600" />
+            <span>Dedicated to Mom</span>
+          </button>
+
           {/* Admin Login Quick Pill if not logged in */}
           {!adminUser && (
             <button
@@ -172,6 +197,13 @@ export const App: React.FC = () => {
         )}
       </main>
 
+      {/* Founder's Dedication Initial Modal */}
+      <DedicationModal
+        isOpen={isDedicationOpen}
+        onClose={() => setIsDedicationOpen(false)}
+        onOpenTutorial={() => setIsTutorialOpen(true)}
+      />
+
       {/* Admin Login Modal */}
       <AdminLogin
         isOpen={isAdminLoginOpen}
@@ -187,7 +219,10 @@ export const App: React.FC = () => {
       />
 
       {/* Footer */}
-      <Footer onOpenAdminLogin={() => setIsAdminLoginOpen(true)} />
+      <Footer 
+        onOpenAdminLogin={() => setIsAdminLoginOpen(true)} 
+        onOpenDedication={() => setIsDedicationOpen(true)}
+      />
     </div>
   );
 };

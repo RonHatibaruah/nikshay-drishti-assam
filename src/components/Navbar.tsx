@@ -11,7 +11,8 @@ import {
   HelpCircle,
   Lock,
   ShieldCheck,
-  UserCheck
+  UserCheck,
+  Heart
 } from 'lucide-react';
 import { AdminUser } from './AdminLogin';
 
@@ -23,6 +24,7 @@ interface NavbarProps {
   onOpenTutorial: () => void;
   adminUser: AdminUser | null;
   onOpenAdminLogin: () => void;
+  onOpenDedication?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -32,7 +34,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   setSelectedRole,
   onOpenTutorial,
   adminUser,
-  onOpenAdminLogin
+  onOpenAdminLogin,
+  onOpenDedication
 }) => {
   return (
     <header className="bg-[#0b1c36] text-white sticky top-0 z-40 shadow-lg border-b border-[#162d54]">
@@ -83,8 +86,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Action Controls: Tutorial Button, Admin Button & Role Selector */}
+        {/* Action Controls: Tutorial Button, Dedication Button, Admin Button & Role Selector */}
         <div className="flex flex-wrap items-center gap-2.5">
+          {/* Founder's Dedication Button */}
+          {onOpenDedication && (
+            <button
+              onClick={onOpenDedication}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-950/70 hover:bg-rose-900/90 text-rose-200 shadow-md transition-all border border-rose-500/50"
+              title="A Personal Dedication to My Mother & Why Tech Must Solve Healthcare"
+            >
+              <Heart className="w-3.5 h-3.5 fill-rose-400 text-rose-400" />
+              <span>Dedicated to Mom</span>
+            </button>
+          )}
+
           {/* Prominent Tutorial Link */}
           <button
             onClick={onOpenTutorial}
