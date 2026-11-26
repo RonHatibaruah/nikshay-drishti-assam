@@ -1,44 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
   <defs>
-    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f766e" />
-      <stop offset="100%" stop-color="#042f2e" />
+    <!-- Deep Navy Shield Gradient -->
+    <linearGradient id="shieldNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f274a" />
+      <stop offset="50%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#060f1e" />
     </linearGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <!-- Vibrant Royal Blue Accent -->
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Warm Vitality Amber/Gold -->
+    <linearGradient id="vitalityGold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.35" />
+
+    <filter id="navyShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#030812" flood-opacity="0.6" />
     </filter>
   </defs>
 
-  <!-- Protective Health Sentinel Shield -->
-  <path d="M50 6 L88 22 C88 60 50 94 50 94 C50 94 12 60 12 22 Z" 
-        fill="url(#shieldGrad)" stroke="#14b8a6" stroke-width="3" filter="url(#glow)" />
+  <!-- Outer Protective Sentinel Shield -->
+  <path d="M50 4 L89 21 C89 61 50 96 50 96 C50 96 11 61 11 21 Z" 
+        fill="url(#shieldNavy)" stroke="#2563eb" stroke-width="3.5" filter="url(#navyShadow)" />
 
-  <!-- Inner Gold Accent Border -->
-  <path d="M50 13 L81 26 C81 56 50 85 50 85 C50 85 19 56 19 26 Z" 
-        fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.8" />
+  <!-- Inner Azure Accent Contour -->
+  <path d="M50 11 L82 25 C82 57 50 87 50 87 C50 87 18 57 18 25 Z" 
+        fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.8" />
 
-  <!-- Stylized Pulmonary Lungs / Cross Symbol -->
-  <!-- Left Lung Lobe -->
-  <path d="M46 36 C42 32 32 34 32 46 C32 58 40 68 46 72 Z" 
-        fill="#2dd4bf" opacity="0.9" />
-  
-  <!-- Right Lung Lobe -->
-  <path d="M54 36 C58 32 68 34 68 46 C68 58 60 68 54 72 Z" 
-        fill="#2dd4bf" opacity="0.9" />
+  <!-- Stylized Pulmonary Anatomy / Health Sentinel (Left & Right Lobes) -->
+  <path d="M46 34 C41 30 31 32 31 45 C31 58 40 68 46 72 Z" 
+        fill="url(#blueGlow)" opacity="0.9" />
+  <path d="M54 34 C59 30 69 32 69 45 C69 58 60 68 54 72 Z" 
+        fill="url(#blueGlow)" opacity="0.9" />
 
-  <!-- Trachea / Central Vertical Stem -->
-  <line x1="50" y1="28" x2="50" y2="60" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="50" y1="44" x2="43" y2="52" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="50" y1="44" x2="57" y2="52" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Central Airway / Clinical Stem -->
+  <line x1="50" y1="24" x2="50" y2="60" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="50" y1="42" x2="42" y2="51" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="50" y1="42" x2="58" y2="51" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
 
-  <!-- Dynamic ECG / Pulse Wave of Life -->
-  <path d="M26 50 L36 50 L41 42 L47 58 L53 45 L58 54 L64 50 L74 50" 
-        fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Vitality Pulse / ECG Telemetry Wave in Amber Gold -->
+  <path d="M24 50 L35 50 L40 40 L46 60 L52 43 L58 55 L63 50 L76 50" 
+        fill="none" stroke="url(#vitalityGold)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Central Telemetry Radar Node -->
-  <circle cx="50" cy="28" r="3.5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+  <!-- Sentinel Telemetry Radar Node -->
+  <circle cx="50" cy="24" r="4" fill="#fbbf24" stroke="#ffffff" stroke-width="1.5" />
 </svg>
