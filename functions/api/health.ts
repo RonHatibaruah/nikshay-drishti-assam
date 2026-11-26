@@ -11,7 +11,7 @@ export async function onRequestGet() {
     challengeOwners: "National Health Mission (NHM) & State TB Cell, Department of Health & Family Welfare, Government of Assam",
     leadApplicant: "Kalyanjit Hatibaruah",
     organization: "Flugelsoft Labs",
-    contactEmail: "kalyanjit.hatibaruah@gmail.com",
+    contactEmail: "Kalyanjit@gmail.com",
     githubRepo: "https://github.com/flugelsoft-01/tb-risk-stratification-ai",
     liveUrl: "https://nikshay-drishti.pages.dev/",
     edgeRuntime: "Cloudflare Pages Functions",

@@ -47,14 +47,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
                 <div className="flex items-center gap-2 text-slate-200">
                   <Mail className="w-4 h-4 text-teal-400 flex-shrink-0" />
                   <span className="text-xs">
-                    Lead Applicant & Technical Inquiries:
+                    Visitor Inquiries & Technical Contact:
                   </span>
                 </div>
                 <a
-                  href="mailto:kalyanjit.hatibaruah@gmail.com"
+                  href="mailto:Kalyanjit@gmail.com"
                   className="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-600 hover:bg-teal-500 text-white font-semibold text-xs rounded-md shadow transition-colors"
                 >
-                  <span>kalyanjit.hatibaruah@gmail.com</span>
+                  <span>Kalyanjit@gmail.com</span>
                 </a>
               </div>
 
@@ -148,13 +148,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdminLogin }) => {
         {/* Bottom Bar with Flugelsoft Labs Copyright */}
         <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-400 text-[11px]">
           <div>
-            © 2026 Flugelsoft Labs. All Rights Reserved. • NESFIC 2026 Government Track
+            Copyrights Flugelsoft Labs • © 2026 Flugelsoft Labs. All Rights Reserved. • NESFIC 2026 Government Track
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <span>Lead Applicant / Principal Investigator: <strong>Kalyanjit Hatibaruah</strong></span>
+            <span>Lead Applicant: <strong>Kalyanjit Hatibaruah</strong></span>
             <span>•</span>
-            <a href="mailto:kalyanjit.hatibaruah@gmail.com" className="text-teal-400 hover:underline">
-              kalyanjit.hatibaruah@gmail.com
+            <a href="mailto:Kalyanjit@gmail.com" className="text-teal-400 hover:underline">
+              Kalyanjit@gmail.com
             </a>
             <span>•</span>
             <a href="https://github.com/flugelsoft-01/tb-risk-stratification-ai" target="_blank" rel="noreferrer" className="text-teal-400 hover:underline">

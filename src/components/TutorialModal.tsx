@@ -309,7 +309,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
         {/* Footer */}
         <div className="bg-slate-50 p-4 border-t border-slate-200 flex items-center justify-between">
           <div className="text-[11px] text-slate-500">
-            Lead Applicant / Principal Investigator: <strong>Kalyanjit Hatibaruah</strong> • Flugelsoft Labs (kalyanjit.hatibaruah@gmail.com)
+            Lead Applicant: <strong>Kalyanjit Hatibaruah</strong> • Copyrights Flugelsoft Labs (Kalyanjit@gmail.com)
           </div>
           <button
             onClick={onClose}

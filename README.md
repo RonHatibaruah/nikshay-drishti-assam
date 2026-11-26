@@ -128,5 +128,5 @@ python3 generate_text_versions.py
 - **Sponsoring Department:** National Health Mission (NHM) & State TB Cell, Department of Health & Family Welfare, Government of Assam
 - **Lead Applicant & Principal Investigator:** **Kalyanjit Hatibaruah**
 - **Organization:** **Flugelsoft Labs**
-- **Contact:** `kalyanjit.hatibaruah@gmail.com`
-- **Copyright:** © 2026 Flugelsoft Labs. All Rights Reserved.
+- **Contact:** `Kalyanjit@gmail.com`
+- **Copyright:** Copyrights Flugelsoft Labs • © 2026 Flugelsoft Labs. All Rights Reserved.
