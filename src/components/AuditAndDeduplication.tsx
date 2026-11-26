@@ -51,12 +51,12 @@ export const AuditAndDeduplication: React.FC = () => {
     <div className="space-y-6">
       {/* Notice Banner */}
       {notification && (
-        <div className="bg-teal-900 border border-teal-500 text-teal-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
+        <div className="bg-[#0a192f] border border-blue-600 text-blue-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-teal-300" />
+            <CheckCircle className="w-5 h-5 text-blue-400" />
             <span className="text-sm font-medium">{notification}</span>
           </div>
-          <button onClick={() => setNotification(null)} className="text-teal-300 hover:text-white text-xs">Dismiss</button>
+          <button onClick={() => setNotification(null)} className="text-blue-300 hover:text-white text-xs">Dismiss</button>
         </div>
       )}
 
@@ -67,7 +67,7 @@ export const AuditAndDeduplication: React.FC = () => {
             <h2 className="text-xl font-bold text-slate-900">
               Audit Intelligence & Algorithmic De-Duplication Engine
             </h2>
-            <span className="bg-teal-100 text-teal-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">
+            <span className="bg-blue-100 text-blue-900 border border-blue-200 text-xs px-2.5 py-0.5 rounded-full font-semibold">
               Quality & Integrity Assurance
             </span>
           </div>
@@ -82,7 +82,7 @@ export const AuditAndDeduplication: React.FC = () => {
             onClick={() => setActiveTab('deathAudit')}
             className={`px-3 py-1.5 rounded-md text-xs font-bold transition-all ${
               activeTab === 'deathAudit'
-                ? 'bg-teal-700 text-white shadow'
+                ? 'bg-blue-700 text-white shadow'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -92,7 +92,7 @@ export const AuditAndDeduplication: React.FC = () => {
             onClick={() => setActiveTab('dedup')}
             className={`px-3 py-1.5 rounded-md text-xs font-bold transition-all ${
               activeTab === 'dedup'
-                ? 'bg-teal-700 text-white shadow'
+                ? 'bg-blue-700 text-white shadow'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -122,7 +122,7 @@ export const AuditAndDeduplication: React.FC = () => {
             </div>
             <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
               <span className="text-xs text-slate-500 font-semibold uppercase block">Preventability Assessment</span>
-              <div className="text-2xl font-bold text-teal-700 mt-1">75% Preventable</div>
+              <div className="text-2xl font-bold text-blue-800 mt-1">75% Preventable</div>
               <p className="text-xs text-slate-500 font-medium mt-1">
                 Actionable with upfront differentiated in-patient triage & nutrition
               </p>
@@ -146,7 +146,7 @@ export const AuditAndDeduplication: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="font-bold text-slate-900 text-base">{audit.patientName}</span>
-                        <span className="text-xs font-mono text-teal-700 font-semibold">({audit.patientId})</span>
+                        <span className="text-xs font-mono text-blue-800 font-semibold">({audit.patientId})</span>
                         <span className="text-xs px-2 py-0.5 rounded font-bold bg-red-100 text-red-800 border border-red-200">
                           Died Day {audit.daysFromTreatmentToDeath} of Rx
                         </span>
@@ -189,9 +189,9 @@ export const AuditAndDeduplication: React.FC = () => {
       {/* Section 2: De-Duplication */}
       {activeTab === 'dedup' && (
         <div className="space-y-6">
-          <div className="bg-slate-900 text-white p-5 rounded-xl border border-teal-800 shadow-md">
-            <h3 className="text-sm font-bold flex items-center gap-2 text-teal-300">
-              <Sparkles className="w-4 h-4 text-teal-400" />
+          <div className="bg-[#0a192f] text-white p-5 rounded-xl border border-blue-800 shadow-md">
+            <h3 className="text-sm font-bold flex items-center gap-2 text-blue-300">
+              <Sparkles className="w-4 h-4 text-blue-400" />
               Machine Learning Fuzzy Record Resolution Algorithm
             </h3>
             <p className="text-xs text-slate-300 mt-1 leading-relaxed">
@@ -209,7 +209,7 @@ export const AuditAndDeduplication: React.FC = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-100">
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-slate-900 text-sm">Cluster #{candidate.id}</span>
-                      <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-teal-100 text-teal-800">
+                      <span className="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-900 border border-blue-200">
                         {candidate.matchConfidence}% Match Confidence
                       </span>
                     </div>
@@ -230,9 +230,9 @@ export const AuditAndDeduplication: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                     {/* Record A */}
                     <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-1.5">
-                      <div className="font-bold text-slate-700 text-xs uppercase text-teal-700">Record A (Primary Initial Entry)</div>
+                      <div className="font-bold text-slate-700 text-xs uppercase text-blue-800">Record A (Primary Initial Entry)</div>
                       <div>Name: <strong className="text-slate-900">{candidate.candidateA.name}</strong></div>
-                      <div>Nikshay ID: <span className="font-mono text-teal-800 font-semibold">{candidate.candidateA.nikshayId}</span></div>
+                      <div>Nikshay ID: <span className="font-mono text-blue-900 font-semibold">{candidate.candidateA.nikshayId}</span></div>
                       <div>Demographics: {candidate.candidateA.age}y / {candidate.candidateA.gender}</div>
                       <div>Address: {candidate.candidateA.address}</div>
                       <div>Mobile: {candidate.candidateA.mobile}</div>
@@ -241,9 +241,9 @@ export const AuditAndDeduplication: React.FC = () => {
 
                     {/* Record B */}
                     <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-1.5">
-                      <div className="font-bold text-slate-700 text-xs uppercase text-teal-700">Record B (Suspected Duplicate Registration)</div>
+                      <div className="font-bold text-slate-700 text-xs uppercase text-blue-800">Record B (Suspected Duplicate Registration)</div>
                       <div>Name: <strong className="text-slate-900">{candidate.candidateB.name}</strong></div>
-                      <div>Nikshay ID: <span className="font-mono text-teal-800 font-semibold">{candidate.candidateB.nikshayId}</span></div>
+                      <div>Nikshay ID: <span className="font-mono text-blue-800 font-semibold">{candidate.candidateB.nikshayId}</span></div>
                       <div>Demographics: {candidate.candidateB.age}y / {candidate.candidateB.gender}</div>
                       <div>Address: {candidate.candidateB.address}</div>
                       <div>Mobile: {candidate.candidateB.mobile}</div>
@@ -252,11 +252,11 @@ export const AuditAndDeduplication: React.FC = () => {
                   </div>
 
                   {/* Matching Signals */}
-                  <div className="mt-3 p-3 bg-teal-50/60 rounded-lg border border-teal-200 text-xs">
-                    <span className="font-bold text-teal-900 block mb-1">Identified Algorithmic Concordance:</span>
+                  <div className="mt-3 p-3 bg-blue-50/60 rounded-lg border border-blue-200 text-xs">
+                    <span className="font-bold text-blue-900 block mb-1">Identified Algorithmic Concordance:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {candidate.matchingFields.map((field, fIdx) => (
-                        <span key={fIdx} className="bg-white border border-teal-300 text-teal-800 px-2 py-0.5 rounded text-[11px] font-medium">
+                        <span key={fIdx} className="bg-white border border-blue-300 text-blue-800 px-2 py-0.5 rounded text-[11px] font-medium">
                           ✓ {field}
                         </span>
                       ))}
@@ -274,7 +274,7 @@ export const AuditAndDeduplication: React.FC = () => {
                       </button>
                       <button
                         onClick={() => handleMergeRecords(candidate.id)}
-                        className="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow flex items-center gap-1"
+                        className="px-3 py-1.5 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold shadow flex items-center gap-1"
                       >
                         <Check className="w-3.5 h-3.5" />
                         Confirm & Merge Master Nikshay ID

@@ -56,9 +56,9 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
       <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col border border-slate-200 overflow-hidden">
         
         {/* Header */}
-        <div className="bg-slate-900 text-white p-5 flex items-center justify-between border-b border-teal-800">
+        <div className="bg-[#0a192f] text-white p-5 flex items-center justify-between border-b border-blue-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white shadow-lg">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-lg">
               <BookOpen className="w-5 h-5" />
             </div>
             <div>
@@ -66,7 +66,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
                 <h2 className="text-base sm:text-lg font-bold">
                   Tutorial & System Guide: NikshayDrishti (নিশ্চয় দৃষ্টি)
                 </h2>
-                <span className="text-[10px] font-mono bg-teal-800 text-teal-200 px-2 py-0.5 rounded border border-teal-600/40">
+                <span className="text-[10px] font-mono bg-blue-900 text-blue-200 px-2 py-0.5 rounded border border-blue-600/40">
                   NESFIC-D-30
                 </span>
               </div>
@@ -96,7 +96,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
               onClick={() => setActiveStep(s.step)}
               className={`px-3 py-1.5 rounded-lg transition-all whitespace-nowrap ${
                 activeStep === s.step
-                  ? 'bg-teal-700 text-white shadow'
+                  ? 'bg-blue-700 text-white shadow'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200'
               }`}
             >
@@ -119,9 +119,9 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
           {/* STEP 1: What is NikshayDrishti? */}
           {activeStep === 1 && (
             <div className="space-y-4">
-              <div className="bg-teal-50 border border-teal-200 p-4 rounded-xl text-teal-950">
-                <h3 className="text-sm font-bold text-teal-900 mb-1 flex items-center gap-1.5">
-                  <Activity className="w-4 h-4 text-teal-700" />
+              <div className="bg-blue-50 border border-blue-200 p-4 rounded-xl text-blue-950">
+                <h3 className="text-sm font-bold text-blue-900 mb-1 flex items-center gap-1.5">
+                  <Activity className="w-4 h-4 text-blue-800" />
                   What is NikshayDrishti?
                 </h3>
                 <p>
@@ -166,7 +166,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                   <div className="flex items-center gap-2 font-bold text-slate-900 mb-2">
-                    <Shield className="w-4 h-4 text-teal-600" />
+                    <Shield className="w-4 h-4 text-blue-700" />
                     State TB Officer (STO)
                   </div>
                   <p className="text-slate-600 text-[11px] leading-relaxed">
@@ -176,7 +176,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
 
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                   <div className="flex items-center gap-2 font-bold text-slate-900 mb-2">
-                    <MapPin className="w-4 h-4 text-teal-600" />
+                    <MapPin className="w-4 h-4 text-blue-700" />
                     District TB Officer (DTO)
                   </div>
                   <p className="text-slate-600 text-[11px] leading-relaxed">
@@ -186,7 +186,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
 
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
                   <div className="flex items-center gap-2 font-bold text-slate-900 mb-2">
-                    <Stethoscope className="w-4 h-4 text-teal-600" />
+                    <Stethoscope className="w-4 h-4 text-blue-700" />
                     Medical Officer & STS
                   </div>
                   <p className="text-slate-600 text-[11px] leading-relaxed">
@@ -247,7 +247,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
                   return (
                     <div key={feat.tab} className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start justify-between gap-3">
                       <div className="flex items-start gap-2.5">
-                        <Icon className="w-4 h-4 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <Icon className="w-4 h-4 text-blue-700 flex-shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-bold text-slate-900">{feat.title}</h4>
                           <p className="text-slate-600 text-[11px] mt-0.5">{feat.desc}</p>
@@ -258,7 +258,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
                           setActiveTab(feat.tab);
                           onClose();
                         }}
-                        className="px-2.5 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded font-bold text-[10px] whitespace-nowrap shadow flex items-center gap-1"
+                        className="px-2.5 py-1 bg-blue-700 hover:bg-blue-800 text-white rounded font-bold text-[10px] whitespace-nowrap shadow flex items-center gap-1"
                       >
                         Open Tab <ChevronRight className="w-3 h-3" />
                       </button>
@@ -272,9 +272,9 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
           {/* STEP 4: Official Proposal Document */}
           {activeStep === 4 && (
             <div className="space-y-4">
-              <div className="bg-slate-900 text-white p-5 rounded-xl border border-teal-800">
-                <h3 className="text-sm font-bold text-teal-300 flex items-center gap-2 mb-1">
-                  <FileText className="w-4 h-4 text-teal-400" />
+              <div className="bg-[#0a192f] text-white p-5 rounded-xl border border-blue-800">
+                <h3 className="text-sm font-bold text-blue-300 flex items-center gap-2 mb-1">
+                  <FileText className="w-4 h-4 text-blue-400" />
                   Official NESFIC-D-30 Solution Proposal
                 </h3>
                 <p className="text-slate-300 text-[11px] leading-relaxed">
@@ -295,7 +295,7 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({
                   target="_blank"
                   rel="noreferrer"
                   download="NESFIC_D30_Proposal_Kalyanjit_Hatibaruah.pdf"
-                  className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-lg shadow flex items-center gap-2 whitespace-nowrap self-start sm:self-center"
+                  className="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-xs rounded-lg shadow flex items-center gap-2 whitespace-nowrap self-start sm:self-center"
                 >
                   <Download className="w-4 h-4" />
                   Download Proposal (PDF)

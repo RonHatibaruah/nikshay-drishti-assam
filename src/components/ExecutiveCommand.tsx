@@ -19,20 +19,20 @@ export const ExecutiveCommand: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 text-white p-6 rounded-2xl shadow-xl border border-teal-800">
+      <div className="bg-gradient-to-r from-[#0a192f] via-[#0f284e] to-[#0a192f] text-white p-6 rounded-2xl shadow-xl border border-blue-900/80">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="bg-teal-500/20 text-teal-300 border border-teal-400/30 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">
+              <span className="bg-blue-500/20 text-blue-200 border border-blue-400/30 text-xs px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">
                 State TB Cell • Government of Assam
               </span>
-              <span className="text-teal-400/40">•</span>
-              <span className="text-xs text-teal-200">NESFIC-D-30 Operational Intelligence</span>
+              <span className="text-blue-400/40">•</span>
+              <span className="text-xs text-blue-200">NESFIC-D-30 Operational Intelligence</span>
             </div>
             <h2 className="text-2xl font-extrabold tracking-tight mt-1">
               TB Mukt Assam 2026 Executive Command Center
             </h2>
-            <p className="text-sm text-slate-300 mt-1 max-w-2xl">
+            <p className="text-sm text-blue-100/90 mt-1 max-w-2xl">
               Consolidated real-time decision-support system tracking epidemiology, differentiated care coverage, diagnostic cascade efficiency, and district elimination milestones.
             </p>
           </div>
@@ -40,7 +40,7 @@ export const ExecutiveCommand: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => alert('Downloading Quarterly State TB Dossier (PDF report)...')}
-              className="px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-xs font-bold shadow-lg flex items-center gap-1.5 transition-all"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold shadow-lg flex items-center gap-1.5 transition-all"
             >
               <Download className="w-4 h-4" />
               Download State Dossier (PDF)
@@ -49,35 +49,35 @@ export const ExecutiveCommand: React.FC = () => {
         </div>
 
         {/* Top 4 KPI Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 pt-6 border-t border-teal-800/80">
-          <div className="bg-slate-800/60 p-4 rounded-xl border border-teal-700/30">
-            <span className="text-xs text-teal-300 font-medium">Statewide TB Notification</span>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 pt-6 border-t border-blue-900/60">
+          <div className="bg-[#12284b]/80 p-4 rounded-xl border border-blue-700/40">
+            <span className="text-xs text-blue-200 font-medium">Statewide TB Notification</span>
             <div className="text-2xl font-extrabold text-white mt-1">32,840</div>
-            <div className="text-[11px] text-teal-400 flex items-center gap-1 mt-1">
+            <div className="text-[11px] text-blue-300 flex items-center gap-1 mt-1">
               <ArrowUpRight className="w-3.5 h-3.5" /> 8.4% case detection surge
             </div>
           </div>
 
-          <div className="bg-slate-800/60 p-4 rounded-xl border border-teal-700/30">
-            <span className="text-xs text-teal-300 font-medium">Treatment Success Rate (TSR)</span>
+          <div className="bg-[#12284b]/80 p-4 rounded-xl border border-blue-700/40">
+            <span className="text-xs text-blue-200 font-medium">Treatment Success Rate (TSR)</span>
             <div className="text-2xl font-extrabold text-white mt-1">85.4%</div>
             <div className="text-[11px] text-emerald-400 flex items-center gap-1 mt-1">
               <ShieldCheck className="w-3.5 h-3.5" /> Aligned with NTEP 85% benchmark
             </div>
           </div>
 
-          <div className="bg-slate-800/60 p-4 rounded-xl border border-teal-700/30">
-            <span className="text-xs text-teal-300 font-medium">Differentiated Care Enrolled</span>
+          <div className="bg-[#12284b]/80 p-4 rounded-xl border border-blue-700/40">
+            <span className="text-xs text-blue-200 font-medium">Differentiated Care Enrolled</span>
             <div className="text-2xl font-extrabold text-amber-300 mt-1">7,420</div>
-            <div className="text-[11px] text-slate-300 mt-1">
+            <div className="text-[11px] text-blue-200/80 mt-1">
               22.6% identified as High/Critical Risk
             </div>
           </div>
 
-          <div className="bg-slate-800/60 p-4 rounded-xl border border-teal-700/30">
-            <span className="text-xs text-teal-300 font-medium">Nikshay Poshan DBT Disbursed</span>
+          <div className="bg-[#12284b]/80 p-4 rounded-xl border border-blue-700/40">
+            <span className="text-xs text-blue-200 font-medium">Nikshay Poshan DBT Disbursed</span>
             <div className="text-2xl font-extrabold text-emerald-400 mt-1">92.4%</div>
-            <div className="text-[11px] text-teal-300 mt-1">
+            <div className="text-[11px] text-blue-300 mt-1">
               ₹1,000/mo fast-tracked nutrition DBT
             </div>
           </div>
@@ -106,7 +106,7 @@ export const ExecutiveCommand: React.FC = () => {
             </div>
             <div className="flex justify-between text-slate-700">
               <span>Sputum Sample Collection Turnaround:</span>
-              <strong className="text-teal-700 font-bold">36 Hours (Down from 84h)</strong>
+              <strong className="text-blue-800 font-bold">36 Hours (Down from 84h)</strong>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const ExecutiveCommand: React.FC = () => {
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-3">
             <h3 className="font-bold text-slate-900 text-sm">Riverine Char Area Network</h3>
-            <span className="text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">Barpeta & Dhubri</span>
+            <span className="text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-900 border border-blue-200">Barpeta & Dhubri</span>
           </div>
           <p className="text-xs text-slate-500 mb-4">
             Islands and sandbar settlements facing geographical isolation during monsoon floods. Supported by solar-powered boat diagnostic units.
@@ -131,7 +131,7 @@ export const ExecutiveCommand: React.FC = () => {
             </div>
             <div className="flex justify-between text-slate-700">
               <span>Loss to Follow-up Reduction:</span>
-              <strong className="text-teal-700 font-bold">-42% vs 2024 Baseline</strong>
+              <strong className="text-blue-800 font-bold">-42% vs 2024 Baseline</strong>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ export const ExecutiveCommand: React.FC = () => {
             </div>
             <div className="flex justify-between text-slate-700">
               <span>Treatment Adherence via MERM:</span>
-              <strong className="text-teal-700 font-bold">91.2% Overall</strong>
+              <strong className="text-blue-800 font-bold">91.2% Overall</strong>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ export const ExecutiveCommand: React.FC = () => {
               Ranked by notification burden, percentage of high-risk patients, and treatment success rates.
             </p>
           </div>
-          <span className="text-xs text-teal-800 font-semibold bg-teal-100 px-2.5 py-1 rounded">
+          <span className="text-xs text-blue-900 font-semibold bg-blue-100 border border-blue-200 px-2.5 py-1 rounded">
             Updated Daily at 06:00 IST
           </span>
         </div>
@@ -226,7 +226,7 @@ export const ExecutiveCommand: React.FC = () => {
                     {dist.vulnerablePocketsCount} Pockets ({dist.diagnosticCentersCount} NAAT Labs)
                   </td>
                   <td className="py-3 px-4 text-right">
-                    <span className="px-2 py-0.5 rounded font-bold text-[10px] bg-teal-50 text-teal-800 border border-teal-200">
+                    <span className="px-2 py-0.5 rounded font-bold text-[10px] bg-blue-50 text-blue-900 border border-blue-200">
                       Pilot Active
                     </span>
                   </td>

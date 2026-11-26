@@ -385,36 +385,36 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
     <div className="space-y-6">
       
       {/* Top Admin Header Bar */}
-      <div className="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 border border-teal-600/30 rounded-2xl p-4 sm:p-6 shadow-xl text-white">
+      <div className="bg-gradient-to-r from-[#0a192f] via-[#0f284e] to-[#0a192f] border border-blue-900/80 rounded-2xl p-4 sm:p-6 shadow-xl text-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-xl bg-teal-600/30 border border-teal-500/40 flex items-center justify-center shadow-inner">
-              <ShieldCheck className="w-7 h-7 text-teal-400" />
+            <div className="w-12 h-12 rounded-xl bg-blue-600/30 border border-blue-500/40 flex items-center justify-center shadow-inner">
+              <ShieldCheck className="w-7 h-7 text-blue-400" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
                   NikshayDrishti Management Cockpit
                 </h1>
-                <span className="px-2 py-0.5 rounded-full bg-teal-900 border border-teal-500/40 text-teal-300 text-[11px] font-mono font-semibold">
+                <span className="px-2 py-0.5 rounded-full bg-blue-950 border border-blue-700/60 text-blue-200 text-[11px] font-mono font-semibold">
                   Admin • {currentUser.role}
                 </span>
               </div>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-blue-100/90">
                 Logged in as <strong className="text-white">{currentUser.name}</strong> ({currentUser.designation}) • {currentUser.district}
               </p>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-xs">
+            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#12284b] border border-blue-700/50 text-xs">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-slate-300 font-mono">ASDC Node • Nikshay API v2.4 Live</span>
+              <span className="text-blue-100 font-mono">ASDC Node • Nikshay API v2.4 Live</span>
             </div>
 
             <button
               onClick={handleExportJSON}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-teal-300 border border-teal-500/30 transition-all shadow-sm"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#12284b] hover:bg-[#1a3768] text-blue-200 border border-blue-500/40 transition-all shadow-sm"
               title="Download Full Admin State as JSON"
             >
               <Download className="w-3.5 h-3.5" />
@@ -433,7 +433,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
         </div>
 
         {/* Sub-Tabs Navigation */}
-        <div className="flex flex-wrap items-center gap-1.5 mt-5 pt-4 border-t border-teal-800/40">
+        <div className="flex flex-wrap items-center gap-1.5 mt-5 pt-4 border-t border-blue-900/60">
           {[
             { id: 'overview', label: 'System Telemetry', icon: Activity },
             { id: 'patients', label: 'Patient Roster & Triage', icon: Users },
@@ -450,8 +450,8 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 onClick={() => setActiveSubTab(tab.id as any)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-lg transition-all ${
                   isActive
-                    ? 'bg-teal-600 text-white shadow-md shadow-teal-900/50'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/80'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-950/60'
+                    : 'text-slate-300 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -469,7 +469,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
             <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
               <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
                 <span>Active TB Patients Managed</span>
-                <Users className="w-4 h-4 text-teal-600" />
+                <Users className="w-4 h-4 text-blue-700" />
               </div>
               <div className="text-2xl font-bold text-slate-900">1,248</div>
               <div className="text-[11px] text-emerald-600 mt-1 flex items-center gap-1">
@@ -517,10 +517,10 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
             <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-4">
               <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                 <div className="flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-teal-600" />
+                  <Activity className="w-5 h-5 text-blue-700" />
                   <h3 className="text-sm font-bold text-slate-800">Operational Bridge Telemetry</h3>
                 </div>
-                <span className="text-[11px] bg-teal-50 text-teal-800 border border-teal-200 px-2 py-0.5 rounded font-mono">
+                <span className="text-[11px] bg-blue-50 text-blue-900 border border-blue-200 px-2 py-0.5 rounded font-mono">
                   Sync Interval: 15 min
                 </span>
               </div>
@@ -528,7 +528,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50 border border-slate-200/80">
                   <div className="flex items-center gap-3">
-                    <Database className="w-4 h-4 text-teal-600" />
+                    <Database className="w-4 h-4 text-blue-700" />
                     <div>
                       <div className="text-xs font-bold text-slate-800">Central Ni-kshay v2.4 API Ingestion</div>
                       <div className="text-[11px] text-slate-500">Subscribed to webhook: /api/v2/tb/notifications/assam</div>
@@ -558,7 +558,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   </div>
                   <button 
                     onClick={() => setActiveSubTab('logistics')}
-                    className="px-2.5 py-1 text-[11px] font-bold bg-teal-600 hover:bg-teal-500 text-white rounded transition-colors"
+                    className="px-2.5 py-1 text-[11px] font-bold bg-blue-700 hover:bg-blue-600 text-white rounded transition-colors"
                   >
                     Manage Buffer
                   </button>
@@ -580,26 +580,26 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 <div className="space-y-2">
                   <button
                     onClick={() => onNavigateTab('worklist')}
-                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-teal-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
+                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-blue-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
                   >
                     <span>View Public TB Risk Worklist</span>
-                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-teal-300" />
+                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-300" />
                   </button>
 
                   <button
                     onClick={() => onNavigateTab('gis')}
-                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-teal-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
+                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-blue-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
                   >
                     <span>Inspect Geospatial Vulnerability Map</span>
-                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-teal-300" />
+                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-300" />
                   </button>
 
                   <button
                     onClick={() => onNavigateTab('facilities')}
-                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-teal-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
+                    className="w-full text-left p-2.5 rounded-lg bg-slate-800 hover:bg-blue-900/60 text-xs text-slate-200 flex items-center justify-between group transition-colors"
                   >
                     <span>Open Facility Supervisory Matrix</span>
-                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-teal-300" />
+                    <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-300" />
                   </button>
                 </div>
               </div>
@@ -618,7 +618,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
             <div>
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Users className="w-5 h-5 text-teal-600" />
+                <Users className="w-5 h-5 text-blue-700" />
                 <span>Patient Roster & Clinical Triage Management</span>
               </h3>
               <p className="text-xs text-slate-500">
@@ -628,7 +628,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
 
             <button
               onClick={() => setIsAddPatientOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-xs font-bold shadow-sm transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-700 hover:bg-blue-600 text-white rounded-lg text-xs font-bold shadow-sm transition-all"
             >
               <Plus className="w-4 h-4" />
               <span>Add New Patient Record</span>
@@ -644,7 +644,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 value={patientSearch}
                 onChange={(e) => setPatientSearch(e.target.value)}
                 placeholder="Search patient name, Ni-kshay ID, or TU..."
-                className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-teal-500"
+                className="w-full pl-9 pr-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600"
               />
             </div>
 
@@ -653,7 +653,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
               <select
                 value={districtFilter}
                 onChange={(e) => setDistrictFilter(e.target.value)}
-                className="border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+                className="border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
               >
                 <option value="All">All Districts (Assam)</option>
                 <option value="Dibrugarh">Dibrugarh</option>
@@ -746,7 +746,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                           setOverrideNewTier(p.tier);
                           setIsOverrideModalOpen(true);
                         }}
-                        className="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-teal-50 text-slate-700 hover:text-teal-700 border border-slate-200 hover:border-teal-300 rounded transition-colors"
+                        className="px-2.5 py-1 text-xs font-semibold bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-800 border border-slate-200 hover:border-blue-300 rounded transition-colors"
                       >
                         Clinical Override
                       </button>
@@ -768,7 +768,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
             <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-4">
               <div className="border-b border-slate-100 pb-3">
                 <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <Truck className="w-4 h-4 text-teal-600" />
+                  <Truck className="w-4 h-4 text-blue-700" />
                   <span>Emergency Diagnostic Buffer Dispatch</span>
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
@@ -791,7 +791,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={dispatchDistrict}
                     onChange={(e) => setDispatchDistrict(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   >
                     {inventory.map(item => (
                       <option key={item.district} value={item.district}>
@@ -808,7 +808,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={dispatchQty}
                     onChange={(e) => setDispatchQty(Number(e.target.value))}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   >
                     <option value={25}>25 Cartridges (Emergency Run)</option>
                     <option value={50}>50 Cartridges (Standard Buffer Top-up)</option>
@@ -824,7 +824,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
 
                 <button
                   type="submit"
-                  className="w-full py-2.5 px-4 bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold rounded-lg shadow-sm flex items-center justify-center gap-2 transition-all"
+                  className="w-full py-2.5 px-4 bg-blue-700 hover:bg-blue-600 text-white text-xs font-bold rounded-lg shadow-sm flex items-center justify-center gap-2 transition-all"
                 >
                   <Truck className="w-4 h-4" />
                   <span>Execute Emergency Reallocation</span>
@@ -837,7 +837,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
               <div className="border-b border-slate-100 pb-3 flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                    <Package className="w-4 h-4 text-teal-600" />
+                    <Package className="w-4 h-4 text-blue-700" />
                     <span>District Sputum Testing Lab Stock Monitor</span>
                   </h3>
                   <p className="text-xs text-slate-500">Live cartridge burn rates and stock-out depletion forecasters.</p>
@@ -917,7 +917,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={newTourDistrict}
                     onChange={(e) => setNewTourDistrict(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   >
                     <option value="Tinsukia">Tinsukia (Tea Garden Belt)</option>
                     <option value="Dibrugarh">Dibrugarh (Upper Assam)</option>
@@ -935,7 +935,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                     onChange={(e) => setNewTourTU(e.target.value)}
                     placeholder="e.g. Doomdooma TU"
                     required
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
 
@@ -946,7 +946,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                     onChange={(e) => setNewTourFocus(e.target.value)}
                     rows={2}
                     required
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
 
@@ -1017,7 +1017,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
           <div className="border-b border-slate-100 pb-4 flex flex-wrap items-center justify-between gap-3">
             <div>
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Sliders className="w-5 h-5 text-teal-600" />
+                <Sliders className="w-5 h-5 text-blue-700" />
                 <span>Clinical Decision Support System (CDSS) Rule Engine & Model Governance</span>
               </h3>
               <p className="text-xs text-slate-500">
@@ -1027,7 +1027,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
 
             <button
               onClick={handleSaveRules}
-              className="flex items-center gap-1.5 px-4 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-xs font-bold shadow-sm transition-all"
+              className="flex items-center gap-1.5 px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-lg text-xs font-bold shadow-sm transition-all"
             >
               <CheckCircle2 className="w-4 h-4" />
               <span>Save & Publish Engine Config</span>
@@ -1051,13 +1051,13 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 onClick={() => setEngineMode('ensemble')}
                 className={`p-3 rounded-lg border cursor-pointer transition-all ${
                   engineMode === 'ensemble' 
-                    ? 'border-teal-500 bg-teal-50/70 shadow-sm' 
+                    ? 'border-blue-500 bg-blue-50/70 shadow-sm' 
                     : 'border-slate-200 bg-white hover:bg-slate-100'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs font-bold text-slate-900">Ensemble XGBoost + SHAP (Recommended)</span>
-                  <span className="text-[10px] bg-teal-600 text-white px-1.5 py-0.2 rounded font-semibold">AUROC 0.88</span>
+                  <span className="text-[10px] bg-blue-700 text-white px-1.5 py-0.2 rounded font-semibold">AUROC 0.88</span>
                 </div>
                 <p className="text-[11px] text-slate-500">
                   Non-linear interaction modeling of undernutrition, cavitation, and comorbidity with real-time SHAP force plots.
@@ -1068,7 +1068,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 onClick={() => setEngineMode('rules')}
                 className={`p-3 rounded-lg border cursor-pointer transition-all ${
                   engineMode === 'rules' 
-                    ? 'border-teal-500 bg-teal-50/70 shadow-sm' 
+                    ? 'border-blue-500 bg-blue-50/70 shadow-sm' 
                     : 'border-slate-200 bg-white hover:bg-slate-100'
                 }`}
               >
@@ -1150,7 +1150,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
               <div className="p-3 rounded-lg border border-slate-200 space-y-1">
                 <div className="flex justify-between text-xs font-medium text-slate-700">
                   <span>Severe Undernutrition (BMI &lt; 16 kg/m²)</span>
-                  <span className="font-mono font-bold text-teal-700">{bmiWeight} pts</span>
+                  <span className="font-mono font-bold text-blue-800">{bmiWeight} pts</span>
                 </div>
                 <input
                   type="range"
@@ -1158,14 +1158,14 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   max="50"
                   value={bmiWeight}
                   onChange={(e) => setBmiWeight(Number(e.target.value))}
-                  className="w-full accent-teal-600"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
               <div className="p-3 rounded-lg border border-slate-200 space-y-1">
                 <div className="flex justify-between text-xs font-medium text-slate-700">
                   <span>Bilateral Cavitary Chest X-Ray Lesions</span>
-                  <span className="font-mono font-bold text-teal-700">{cavitaryWeight} pts</span>
+                  <span className="font-mono font-bold text-blue-800">{cavitaryWeight} pts</span>
                 </div>
                 <input
                   type="range"
@@ -1173,14 +1173,14 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   max="40"
                   value={cavitaryWeight}
                   onChange={(e) => setCavitaryWeight(Number(e.target.value))}
-                  className="w-full accent-teal-600"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
               <div className="p-3 rounded-lg border border-slate-200 space-y-1">
                 <div className="flex justify-between text-xs font-medium text-slate-700">
                   <span>HIV / Immunocompromised Co-infection</span>
-                  <span className="font-mono font-bold text-teal-700">{hivWeight} pts</span>
+                  <span className="font-mono font-bold text-blue-800">{hivWeight} pts</span>
                 </div>
                 <input
                   type="range"
@@ -1188,14 +1188,14 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   max="40"
                   value={hivWeight}
                   onChange={(e) => setHivWeight(Number(e.target.value))}
-                  className="w-full accent-teal-600"
+                  className="w-full accent-blue-600"
                 />
               </div>
 
               <div className="p-3 rounded-lg border border-slate-200 space-y-1">
                 <div className="flex justify-between text-xs font-medium text-slate-700">
                   <span>Uncontrolled Diabetes (HbA1c &gt; 9.0)</span>
-                  <span className="font-mono font-bold text-teal-700">{diabetesWeight} pts</span>
+                  <span className="font-mono font-bold text-blue-800">{diabetesWeight} pts</span>
                 </div>
                 <input
                   type="range"
@@ -1203,7 +1203,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   max="30"
                   value={diabetesWeight}
                   onChange={(e) => setDiabetesWeight(Number(e.target.value))}
-                  className="w-full accent-teal-600"
+                  className="w-full accent-blue-600"
                 />
               </div>
             </div>
@@ -1217,7 +1217,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3">
             <div>
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-teal-600" />
+                <FileText className="w-5 h-5 text-blue-700" />
                 <span>Immutable Regulatory Audit Trail</span>
               </h3>
               <p className="text-xs text-slate-500">
@@ -1253,7 +1253,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <tr key={log.id} className="hover:bg-slate-50">
                     <td className="py-2.5 px-3 font-bold text-slate-800">{log.id}</td>
                     <td className="py-2.5 px-3 text-slate-500">{log.timestamp}</td>
-                    <td className="py-2.5 px-3 text-teal-700 font-semibold font-sans">{log.user}</td>
+                    <td className="py-2.5 px-3 text-blue-800 font-semibold font-sans">{log.user}</td>
                     <td className="py-2.5 px-3">
                       <span className="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-[10px] font-bold">
                         {log.action}
@@ -1275,7 +1275,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
           <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-slate-200 p-6 my-8 space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Plus className="w-5 h-5 text-teal-600" />
+                <Plus className="w-5 h-5 text-blue-700" />
                 <span>Add Patient Record & Evaluate CDSS Risk</span>
               </h3>
               <button 
@@ -1295,7 +1295,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   placeholder="e.g. Bipin Saikia"
                   value={newPatientName}
                   onChange={(e) => setNewPatientName(e.target.value)}
-                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-teal-500"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-600"
                 />
               </div>
 
@@ -1308,7 +1308,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                     max="100"
                     value={newPatientAge}
                     onChange={(e) => setNewPatientAge(Number(e.target.value))}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
                 <div>
@@ -1316,7 +1316,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={newPatientGender}
                     onChange={(e) => setNewPatientGender(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-blue-600"
                   >
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -1331,7 +1331,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={newPatientDistrict}
                     onChange={(e) => setNewPatientDistrict(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-blue-600"
                   >
                     <option value="Dibrugarh">Dibrugarh</option>
                     <option value="Barpeta">Barpeta</option>
@@ -1347,7 +1347,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                     type="text"
                     value={newPatientTU}
                     onChange={(e) => setNewPatientTU(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
               </div>
@@ -1362,7 +1362,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                     max="40"
                     value={newPatientBMI}
                     onChange={(e) => setNewPatientBMI(Number(e.target.value))}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
                 <div>
@@ -1370,7 +1370,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   <select
                     value={newPatientSputum}
                     onChange={(e) => setNewPatientSputum(e.target.value)}
-                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-teal-500"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-blue-600"
                   >
                     <option value="3+">3+ (High Bacillary Load)</option>
                     <option value="2+">2+</option>
@@ -1390,7 +1390,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                       type="checkbox"
                       checked={newPatientCavitation}
                       onChange={(e) => setNewPatientCavitation(e.target.checked)}
-                      className="accent-teal-600 rounded"
+                      className="accent-blue-600 rounded"
                     />
                     <span>Bilateral Cavitary CXR</span>
                   </label>
@@ -1400,7 +1400,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                       type="checkbox"
                       checked={newPatientDiabetes}
                       onChange={(e) => setNewPatientDiabetes(e.target.checked)}
-                      className="accent-teal-600 rounded"
+                      className="accent-blue-600 rounded"
                     />
                     <span>Diabetes Mellitus (DM)</span>
                   </label>
@@ -1410,7 +1410,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                       type="checkbox"
                       checked={newPatientHIV}
                       onChange={(e) => setNewPatientHIV(e.target.checked)}
-                      className="accent-teal-600 rounded"
+                      className="accent-blue-600 rounded"
                     />
                     <span>HIV Co-infection</span>
                   </label>
@@ -1427,7 +1427,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white font-bold shadow-sm"
+                  className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-600 text-white font-bold shadow-sm"
                 >
                   Calculate CDSS Risk & Save
                 </button>
@@ -1443,7 +1443,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
           <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200 p-6 space-y-4">
             <div className="border-b border-slate-100 pb-3">
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Stethoscope className="w-5 h-5 text-teal-600" />
+                <Stethoscope className="w-5 h-5 text-blue-700" />
                 <span>Authorized Clinical Triage Override</span>
               </h3>
               <p className="text-xs text-slate-500 mt-1">
@@ -1470,7 +1470,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                 <select
                   value={overrideNewTier}
                   onChange={(e) => setOverrideNewTier(e.target.value as any)}
-                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-teal-500 font-bold"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs bg-white focus:ring-1 focus:ring-blue-600 font-bold"
                 >
                   <option value="Critical">Critical (Immediate Inpatient Hospitalization)</option>
                   <option value="High">High (Bi-weekly ASHA Home Monitoring)</option>
@@ -1489,7 +1489,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   placeholder="e.g. Patient presents with hemoptysis and uncontrolled diabetes despite moderate BMI; escalating to Critical for 48hr clinical stabilization."
                   rows={3}
                   required
-                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-teal-500"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-1 focus:ring-blue-600"
                 />
               </div>
 
@@ -1505,7 +1505,7 @@ export const AdminConsole: React.FC<AdminConsoleProps> = ({ currentUser, onLogou
                   type="button"
                   disabled={!overrideReasonInput.trim()}
                   onClick={handleApplyOverride}
-                  className="px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white font-bold disabled:opacity-50 shadow-sm"
+                  className="px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-600 text-white font-bold disabled:opacity-50 shadow-sm"
                 >
                   Commit Clinical Override
                 </button>

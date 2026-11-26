@@ -70,12 +70,12 @@ export const FacilitySupervision: React.FC = () => {
     <div className="space-y-6">
       {/* Notice Banner */}
       {notice && (
-        <div className="bg-teal-900 border border-teal-500 text-teal-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
+        <div className="bg-[#0a192f] border border-blue-600 text-blue-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-teal-300" />
+            <CheckCircle2 className="w-5 h-5 text-blue-300" />
             <span className="text-sm font-medium">{notice}</span>
           </div>
-          <button onClick={() => setNotice(null)} className="text-teal-300 hover:text-white text-xs">Dismiss</button>
+          <button onClick={() => setNotice(null)} className="text-blue-300 hover:text-white text-xs">Dismiss</button>
         </div>
       )}
 
@@ -86,7 +86,7 @@ export const FacilitySupervision: React.FC = () => {
             <h2 className="text-xl font-bold text-slate-900">
               Facility Supportive Supervision & Diagnostic Logistics Optimizer
             </h2>
-            <span className="bg-teal-100 text-teal-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">
+            <span className="bg-blue-100 text-blue-900 border border-blue-200 text-xs px-2.5 py-0.5 rounded-full font-semibold">
               Logistics & Resource DSS
             </span>
           </div>
@@ -100,7 +100,7 @@ export const FacilitySupervision: React.FC = () => {
           <select
             value={selectedDistrict}
             onChange={(e) => setSelectedDistrict(e.target.value)}
-            className="border border-slate-300 rounded-lg py-2 px-3 text-xs font-semibold text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-sm"
+            className="border border-slate-300 rounded-lg py-2 px-3 text-xs font-semibold text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 shadow-sm"
           >
             <option value="ALL">All Assam Districts</option>
             <option value="Dibrugarh">Dibrugarh</option>
@@ -141,7 +141,7 @@ export const FacilitySupervision: React.FC = () => {
               <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-4 text-xs">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-slate-500 flex items-center gap-1">
-                    <Cpu className="w-3.5 h-3.5 text-teal-600" /> Technology:
+                    <Cpu className="w-3.5 h-3.5 text-blue-700" /> Technology:
                   </span>
                   <span className="font-bold text-slate-800">{fac.machineType}</span>
                 </div>
@@ -154,7 +154,7 @@ export const FacilitySupervision: React.FC = () => {
                 {/* Meter */}
                 <div className="w-full bg-slate-200 h-2 rounded-full mt-2 overflow-hidden">
                   <div 
-                    className={`h-full ${fac.utilizationRate > 90 ? 'bg-amber-500' : 'bg-teal-600'}`} 
+                    className={`h-full ${fac.utilizationRate > 90 ? 'bg-amber-500' : 'bg-blue-700'}`} 
                     style={{ width: `${Math.min(100, fac.utilizationRate)}%` }}
                   ></div>
                 </div>
@@ -204,14 +204,14 @@ export const FacilitySupervision: React.FC = () => {
         <div className="flex items-center justify-between mb-4">
           <div>
             <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-              <UserCheck className="w-5 h-5 text-teal-600" />
+              <UserCheck className="w-5 h-5 text-blue-700" />
               Algorithmic Supervisory Priority Index (SPI) — Weekly Tour Planner
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
               Identifies peripheral health facilities (PHIs) and TB units exhibiting severe operational bottlenecks requiring immediate on-site supportive supervision.
             </p>
           </div>
-          <span className="bg-teal-50 border border-teal-200 text-teal-800 text-xs px-2.5 py-1 rounded font-semibold">
+          <span className="bg-blue-50 border border-blue-200 text-blue-900 text-xs px-2.5 py-1 rounded font-semibold">
             DTO & STS Action Deck
           </span>
         </div>
@@ -251,7 +251,7 @@ export const FacilitySupervision: React.FC = () => {
                   <td className="py-3.5 px-4 text-slate-600 font-medium">
                     {item.lastVisited}
                   </td>
-                  <td className="py-3.5 px-4 text-teal-800 font-semibold">
+                  <td className="py-3.5 px-4 text-blue-900 font-semibold">
                     {item.assignedSupervisor}
                   </td>
                   <td className="py-3.5 px-4 text-right">
@@ -259,7 +259,7 @@ export const FacilitySupervision: React.FC = () => {
                       onClick={() => {
                         setNotice(`Field visit route and digital checklist dispatched to ${item.assignedSupervisor} for ${item.phi}`);
                       }}
-                      className="px-3 py-1.5 rounded bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs shadow-sm"
+                      className="px-3 py-1.5 rounded bg-blue-700 hover:bg-blue-800 text-white font-semibold text-xs shadow-sm"
                     >
                       Schedule Tour
                     </button>

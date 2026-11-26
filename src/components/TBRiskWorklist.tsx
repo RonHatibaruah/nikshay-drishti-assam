@@ -80,12 +80,12 @@ export const TBRiskWorklist: React.FC = () => {
     <div className="space-y-6">
       {/* Notice Banner */}
       {actionNotice && (
-        <div className="bg-teal-900 border border-teal-500 text-teal-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
+        <div className="bg-[#0a192f] border border-blue-600 text-blue-100 px-4 py-3 rounded-lg shadow-lg flex items-center justify-between animate-fadeIn">
           <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-teal-300" />
+            <CheckCircle className="w-5 h-5 text-blue-400" />
             <span className="text-sm font-medium">{actionNotice}</span>
           </div>
-          <button onClick={() => setActionNotice(null)} className="text-teal-300 hover:text-white text-xs">Dismiss</button>
+          <button onClick={() => setActionNotice(null)} className="text-blue-300 hover:text-white text-xs">Dismiss</button>
         </div>
       )}
 
@@ -96,7 +96,7 @@ export const TBRiskWorklist: React.FC = () => {
             <h2 className="text-xl font-bold text-slate-900">
               TB Patient Risk Stratification & Clinical Worklist
             </h2>
-            <span className="bg-teal-100 text-teal-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">
+            <span className="bg-blue-100 text-blue-900 border border-blue-200 text-xs px-2.5 py-0.5 rounded-full font-semibold">
               Live Nikshay Sync
             </span>
           </div>
@@ -138,7 +138,7 @@ export const TBRiskWorklist: React.FC = () => {
               placeholder="Search by Patient Name, Nikshay ID (e.g. AS-DIB-2026-00481), or Health Facility..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ export const TBRiskWorklist: React.FC = () => {
             <select
               value={selectedTier}
               onChange={(e) => setSelectedTier(e.target.value)}
-              className="border border-slate-300 rounded-md py-1.5 px-2 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="border border-slate-300 rounded-md py-1.5 px-2 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               <option value="ALL">All Risk Tiers</option>
               <option value="CRITICAL">Critical (Score 90+)</option>
@@ -167,7 +167,7 @@ export const TBRiskWorklist: React.FC = () => {
             <select
               value={selectedDistrict}
               onChange={(e) => setSelectedDistrict(e.target.value)}
-              className="border border-slate-300 rounded-md py-1.5 px-2 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="border border-slate-300 rounded-md py-1.5 px-2 text-xs font-medium text-slate-700 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               <option value="ALL">All Districts (Assam)</option>
               <option value="Dibrugarh">Dibrugarh</option>
@@ -205,7 +205,7 @@ export const TBRiskWorklist: React.FC = () => {
                     {/* Patient Name & Nikshay */}
                     <td className="py-3.5 px-4">
                       <div className="font-bold text-slate-900">{patient.name}</div>
-                      <div className="text-xs text-teal-700 font-mono font-medium">{patient.id}</div>
+                      <div className="text-xs text-blue-700 font-mono font-medium">{patient.id}</div>
                       <div className="text-[11px] text-slate-500 mt-0.5">{patient.phi} • {patient.district}</div>
                     </td>
 
@@ -302,7 +302,7 @@ export const TBRiskWorklist: React.FC = () => {
                     <td className="py-3.5 px-4 text-right">
                       <button
                         onClick={() => setActivePatient(patient)}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-teal-50 hover:bg-teal-100 text-teal-800 text-xs font-semibold border border-teal-200 transition-colors"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-50 hover:bg-blue-100 text-blue-900 text-xs font-semibold border border-blue-200 transition-colors"
                       >
                         Explain & CDSS
                         <ChevronRight className="w-3.5 h-3.5" />
@@ -318,19 +318,19 @@ export const TBRiskWorklist: React.FC = () => {
 
       {/* Patient Detail & SHAP Explainability Modal */}
       {activePatient && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fadeIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0a192f]/70 backdrop-blur-sm animate-fadeIn">
           <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200">
             {/* Modal Header */}
-            <div className="bg-slate-900 text-white p-5 rounded-t-2xl flex items-center justify-between">
+            <div className="bg-[#0a192f] text-white p-5 rounded-t-2xl flex items-center justify-between border-b border-blue-900">
               <div>
                 <div className="flex items-center gap-2">
                   <h3 className="text-lg font-bold">{activePatient.name}</h3>
-                  <span className="text-xs font-mono bg-teal-800 text-teal-200 px-2 py-0.5 rounded">
+                  <span className="text-xs font-mono bg-blue-950 text-blue-200 border border-blue-700/60 px-2 py-0.5 rounded">
                     {activePatient.id}
                   </span>
                   {getTierBadge(activePatient.riskTier)}
                 </div>
-                <p className="text-xs text-slate-300 mt-1">
+                <p className="text-xs text-blue-200 mt-1">
                   Peripheral Health Institution: {activePatient.phi} • {activePatient.tbUnit}, {activePatient.district}
                 </p>
               </div>
@@ -377,7 +377,7 @@ export const TBRiskWorklist: React.FC = () => {
               {/* SHAP Feature Attribution Matrix */}
               <div>
                 <h4 className="text-sm font-bold text-slate-900 mb-2 flex items-center gap-1.5">
-                  <TrendingUp className="w-4 h-4 text-teal-600" />
+                  <TrendingUp className="w-4 h-4 text-blue-700" />
                   Explainable Risk Attribution (SHAP Feature Weight Matrix)
                 </h4>
                 <p className="text-xs text-slate-500 mb-3">
@@ -413,7 +413,7 @@ export const TBRiskWorklist: React.FC = () => {
               {/* Differentiated Care Action Checklist */}
               <div>
                 <h4 className="text-sm font-bold text-slate-900 mb-2 flex items-center gap-1.5">
-                  <Stethoscope className="w-4 h-4 text-teal-600" />
+                  <Stethoscope className="w-4 h-4 text-blue-700" />
                   Targeted Differentiated Care Directives
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -430,8 +430,8 @@ export const TBRiskWorklist: React.FC = () => {
                   </div>
 
                   <div className="p-3 rounded-lg border bg-slate-50 border-slate-200 text-slate-700">
-                    <div className="font-bold flex items-center gap-1.5 text-teal-800">
-                      <UserCheck className="w-4 h-4 text-teal-600" />
+                    <div className="font-bold flex items-center gap-1.5 text-blue-900">
+                      <UserCheck className="w-4 h-4 text-blue-700" />
                       Supervisory Home Cadence
                     </div>
                     <div className="text-[11px] mt-1 text-slate-600">
@@ -441,8 +441,8 @@ export const TBRiskWorklist: React.FC = () => {
                   </div>
 
                   <div className="p-3 rounded-lg border bg-slate-50 border-slate-200 text-slate-700">
-                    <div className="font-bold flex items-center gap-1.5 text-teal-800">
-                      <Activity className="w-4 h-4 text-teal-600" />
+                    <div className="font-bold flex items-center gap-1.5 text-blue-900">
+                      <Activity className="w-4 h-4 text-blue-700" />
                       Nikshay Poshan Direct Benefit Transfer (DBT)
                     </div>
                     <div className="text-[11px] mt-1 text-slate-600">
@@ -451,8 +451,8 @@ export const TBRiskWorklist: React.FC = () => {
                   </div>
 
                   <div className="p-3 rounded-lg border bg-slate-50 border-slate-200 text-slate-700">
-                    <div className="font-bold flex items-center gap-1.5 text-teal-800">
-                      <Phone className="w-4 h-4 text-teal-600" />
+                    <div className="font-bold flex items-center gap-1.5 text-blue-900">
+                      <Phone className="w-4 h-4 text-blue-700" />
                       Patient Contact & ABHA ID
                     </div>
                     <div className="text-[11px] mt-1 text-slate-600">
@@ -470,7 +470,7 @@ export const TBRiskWorklist: React.FC = () => {
                   handleAction(`Clinical alert dispatched to Medical Officer in-charge at ${activePatient.phi}`);
                   setActivePatient(null);
                 }}
-                className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold shadow"
+                className="px-4 py-2 bg-[#0a192f] hover:bg-blue-900 text-white rounded-lg text-xs font-semibold shadow"
               >
                 Dispatch Medical Officer Alert
               </button>
@@ -480,7 +480,7 @@ export const TBRiskWorklist: React.FC = () => {
                     handleAction(`Nutritional support kit approved for ${activePatient.name}`);
                     setActivePatient(null);
                   }}
-                  className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-semibold shadow"
+                  className="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-xs font-semibold shadow"
                 >
                   Approve High-Protein Kit
                 </button>

@@ -77,7 +77,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-100 text-slate-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans">
       {/* Top Navigation */}
       <Navbar
         activeTab={activeTab}
@@ -93,7 +93,7 @@ export const App: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4 flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-2 text-xs text-slate-500">
           <span>Active View:</span>
-          <span className="font-bold text-slate-800 bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-sm flex items-center gap-1.5">
+          <span className="font-bold text-slate-800 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200 shadow-sm flex items-center gap-1.5">
             {activeTab === 'admin' ? (
               <>
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
@@ -126,9 +126,9 @@ export const App: React.FC = () => {
           {/* Tutorial / Guide Pill */}
           <button
             onClick={() => setIsTutorialOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1 bg-teal-50 hover:bg-teal-100 border border-teal-300 text-teal-900 rounded-lg text-xs font-bold shadow-sm transition-all"
+            className="flex items-center gap-1.5 px-3 py-1 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-900 rounded-lg text-xs font-bold shadow-sm transition-all"
           >
-            <HelpCircle className="w-3.5 h-3.5 text-teal-700" />
+            <HelpCircle className="w-3.5 h-3.5 text-blue-700" />
             <span>How to Use & Test</span>
           </button>
         </div>
@@ -162,7 +162,7 @@ export const App: React.FC = () => {
               </p>
               <button
                 onClick={() => setIsAdminLoginOpen(true)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs shadow-md transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-600 text-white font-bold text-xs shadow-md transition-all"
               >
                 <Lock className="w-4 h-4" />
                 <span>Open Admin Login (Demo Credentials)</span>
